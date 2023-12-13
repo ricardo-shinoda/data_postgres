@@ -1,0 +1,39 @@
+-- AGREGATION FUNCTION
+
+--SIMPLE QUERY
+
+SELECT * FROM funcionarios;
+
+-- COUNT OCURRENCES
+-- COUNT, MAX, MIN, SUM...
+
+SELECT COUNT(*) FROM funcionarios;
+
+-- GROUPING BY GENDER
+
+SELECT COUNT(*) FROM funcionarios
+GROUP BY sexo;
+
+-- NAMING THE COLUMN
+
+SELECT sexo, COUNT(*) AS "Quantity" FROM funcionarios
+GROUP BY sexo;
+
+-- SHOW NUMBER OF EMPLOYEE FROM EACH DEPARTMENT
+
+SELECT departamento, COUNT(*) AS "Employee qty" FROM funcionarios
+GROUP BY departamento;
+
+-- SHOW MAX SALARY
+
+SELECT MAX(salario) AS "Max Salary" FROM funcionarios;
+
+-- SHOW MIN SALARY
+
+SELECT MIN(salario) AS "Min Salary" FROM funcionarios;
+
+-- SHOW MIN SALARY AND MAX SALARY
+
+SELECT MIN(salario) AS "Min Salary", MAX(salario) AS "Max Salary" FROM funcionarios;
+
+-- new query
