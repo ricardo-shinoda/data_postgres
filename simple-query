@@ -36,4 +36,47 @@ SELECT MIN(salario) AS "Min Salary" FROM funcionarios;
 
 SELECT MIN(salario) AS "Min Salary", MAX(salario) AS "Max Salary" FROM funcionarios;
 
--- new query
+-- SHOW MAX AND MIN FROM EACH DEPARMENT
+
+SELECT departamento, MIN(salario) AS "Min Salary", MAX(salario) AS "Max Salary"
+FROM funcionarios
+GROUP BY departamento;
+
+-- SHOW MIN AND MAX MY GENDER
+
+SELECT sexo, MIN(salario) AS "min salary", MAX(salario) AS "Max Salary"
+FROM funcionarios
+GROUP BY sexo;
+
+
+-- STATISTIC
+
+-- SHOW LINE LIMITED QUANTITY
+
+SELECT * FROM funcionarios
+LIMIT 10;
+
+-- SHOW TOTAL AMMOUNT EXPENSE
+
+SELECT SUM(salario) FROM funcionarios;
+
+-- SHOW TOTAL AMOUNT PER DEPARTMENT
+
+SELECT departamento, SUM(salario) FROM funcionarios
+GROUP BY departamento;
+
+-- SHOW TOTAL AND AVERAGE AMOUNT PER EMPLOYEE/DEPARTMENT
+
+SELECT departamento, SUM(salario), AVG(salario) FROM funcionarios
+GROUP BY departamento
+ORDER BY 3; -- to order by average, third column
+
+--SAME AS ABOVE BUT IN A ASCENDENT ORDER
+
+SELECT departamento, SUM(salario), AVG(salario) FROM funcionarios
+GROUP BY departamento
+ORDER BY 3 ASC;
+
+
+
+
