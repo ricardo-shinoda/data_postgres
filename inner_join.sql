@@ -1,3 +1,4 @@
+-- Join study
 SELECT funcionarios.nome, localizacao.localizacao, localizacao.pais
 FROM funcionarios
 INNER JOIN localizacao ON funcionarios.idregiao = localizacao.idregiao;

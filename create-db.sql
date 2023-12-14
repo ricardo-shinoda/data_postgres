@@ -1,4 +1,4 @@
--- to create database to study
+-- To create database
 create table departamentos (
     departamento varchar(100),
     divisao varchar(100),
