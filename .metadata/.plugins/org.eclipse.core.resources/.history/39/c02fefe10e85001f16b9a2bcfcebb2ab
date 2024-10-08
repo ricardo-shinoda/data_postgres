@@ -1,0 +1,16 @@
+CREATE TABLE client (
+	idcliente integer NOT NULL,
+	name varchar(50) NO NULL,
+	cpf varchar(11),
+	rg varchar(15),
+	date_of_birth date,
+	genre char(1),
+	profession varchar(30),
+	nacionality varchar(30),
+	street varchar(30),
+	house_number varchar(10),
+	complement varchar(30),
+	city varchar(30),
+	state varchar(30),
+	COMMENTS TEXT,
+)

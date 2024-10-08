@@ -22,8 +22,3 @@
 
 CREATE TABLE testando (
  nome varchar(10)
- );
-
-INSERT INTO testando (nome) VALUES ('Lucas');
-
-SELECT * FROM testando;

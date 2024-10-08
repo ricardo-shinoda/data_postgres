@@ -25,5 +25,3 @@ CREATE TABLE testando (
  );
 
 INSERT INTO testando (nome) VALUES ('Lucas');
-
-SELECT * FROM testando;
