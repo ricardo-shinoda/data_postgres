@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT exist client (
+CREATE TABLE client (
 	clientID integer NOT NULL,
 	name varchar(50) NOT NULL,
 	cpf varchar(11),
@@ -16,7 +16,7 @@ CREATE TABLE IF NOT exist client (
 	
 --	primary key
 	CONSTRAINT pk_cln_clientID PRIMARY KEY (clientID)
-);
+),
 
 INSERT INTO client (clientID, name, cpf, rg, date_of_birth, genre, profession, nacionality, street, house_number, complement, city, state, comments)
 VALUES 

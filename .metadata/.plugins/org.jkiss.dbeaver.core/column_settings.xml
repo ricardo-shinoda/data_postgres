@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <items>
+	<item id="NodeList/PostgreSchema">
+		<column name="Name" visible="true" order="0" width="100"/>
+		<column name="Comment" visible="true" order="1" width="1074"/>
+	</item>
 	<item id="NodeList/PostgreTable">
 		<column name="Table Name" visible="true" order="0" width="100"/>
 		<column name="Object ID" visible="true" order="1" width="100"/>
@@ -15,5 +19,11 @@
 	<item id="projectExplorer">
 		<column name="Name" visible="true" order="0" width="286"/>
 		<column name="DataSource" visible="true" order="1" width="190"/>
+	</item>
+	<item id="scriptSelectorViewer">
+		<column name="Script" visible="true" order="0" width="172"/>
+		<column name="Time" visible="true" order="1" width="181"/>
+		<column name="Info" visible="true" order="2" width="68"/>
+		<column name="Folder" visible="true" order="3" width="80"/>
 	</item>
 </items>

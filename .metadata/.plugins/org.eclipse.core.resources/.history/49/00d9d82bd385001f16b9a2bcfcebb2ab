@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT exist client (
+CREATE TABLE client (
 	clientID integer NOT NULL,
 	name varchar(50) NOT NULL,
 	cpf varchar(11),
