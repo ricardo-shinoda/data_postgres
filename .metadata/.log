@@ -2397,3 +2397,1293 @@ org.postgresql.util.PSQLException: ERROR: database "pedidos" is being accessed b
 	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
 	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 4 2 2024-10-11 20:22:34.264
+!MESSAGE IJobChangeListener timeout detected. Further calls to IJobChangeListener may occur in random order and join(family) can return too soon. IJobChangeListener should return within 3000 ms. IJobChangeListener methods should not block. Possible deadlock.
+!STACK 0
+java.util.concurrent.TimeoutException: IJobChangeListener timeout detected. Further calls to IJobChangeListener may occur in random order and join(family) can return too soon. IJobChangeListener should return within 3000 ms. IJobChangeListener methods should not block. Possible deadlock.
+	at org.eclipse.core.internal.jobs.JobListeners.waitAndSendEvents(JobListeners.java:106)
+	at org.eclipse.core.internal.jobs.JobManager.startJob(JobManager.java:1787)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:244)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+!SUBENTRY 1 org.eclipse.core.jobs 4 2 2024-10-11 20:22:34.281
+!MESSAGE Thread that is running the IJobChangeListener: Worker-13: Dump server output
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+All thread infos: 
+"main" prio=6 Id=1 RUNNABLE
+	at org.eclipse.swt.internal.gtk.OS.Call(Native Method)
+	at org.eclipse.swt.widgets.Display.sleep(Display.java:5641)
+	at org.eclipse.ui.application.WorkbenchAdvisor.eventLoopIdle(WorkbenchAdvisor.java:339)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.eventLoopIdle(IDEWorkbenchAdvisor.java:993)
+	at org.jkiss.dbeaver.ui.app.standalone.ApplicationWorkbenchAdvisor.eventLoopIdle(ApplicationWorkbenchAdvisor.java:506)
+	at org.eclipse.ui.internal.Workbench$1.eventLoopIdle(Workbench.java:474)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1156)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	...
+
+"Reference Handler" daemon prio=10 Id=2 RUNNABLE
+	at java.base@17.0.6/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+	at java.base@17.0.6/java.lang.ref.Reference.processPendingReferences(Unknown Source)
+	at java.base@17.0.6/java.lang.ref.Reference$ReferenceHandler.run(Unknown Source)
+
+"Finalizer" daemon prio=8 Id=3 WAITING on java.lang.ref.ReferenceQueue$Lock@29894bb7
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@29894bb7
+	at java.base@17.0.6/java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at java.base@17.0.6/java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at java.base@17.0.6/java.lang.ref.Finalizer$FinalizerThread.run(Unknown Source)
+
+"Signal Dispatcher" daemon prio=9 Id=4 RUNNABLE
+
+"Common-Cleaner" daemon prio=8 Id=12 TIMED_WAITING on java.lang.ref.ReferenceQueue$Lock@2fb4cf67
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@2fb4cf67
+	at java.base@17.0.6/java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at java.base@17.0.6/jdk.internal.ref.CleanerImpl.run(Unknown Source)
+	at java.base@17.0.6/java.lang.Thread.run(Unknown Source)
+	at java.base@17.0.6/jdk.internal.misc.InnocuousThread.run(Unknown Source)
+
+"Notification Thread" daemon prio=9 Id=13 RUNNABLE
+
+"Active Thread: Equinox Container: 3952fa38-74c2-4e5d-911d-0c37a16917b7" prio=5 Id=15 TIMED_WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@135868ae
+	at java.base@17.0.6/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@135868ae
+	at java.base@17.0.6/java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	...
+
+"Framework Event Dispatcher: Equinox Container: 3952fa38-74c2-4e5d-911d-0c37a16917b7" daemon prio=5 Id=17 WAITING on org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@6038dc74
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@6038dc74
+	at java.base@17.0.6/java.lang.Object.wait(Unknown Source)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.getNextEvent(EventManager.java:396)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:337)
+
+"Start Level: Equinox Container: 3952fa38-74c2-4e5d-911d-0c37a16917b7" daemon prio=5 Id=18 WAITING on org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@38ff737
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@38ff737
+	at java.base@17.0.6/java.lang.Object.wait(Unknown Source)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.getNextEvent(EventManager.java:396)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:337)
+
+"SCR Component Actor" daemon prio=5 Id=19 WAITING on java.util.LinkedList@ac9cfd6
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on java.util.LinkedList@ac9cfd6
+	at java.base@17.0.6/java.lang.Object.wait(Unknown Source)
+	at org.apache.felix.scr.impl.ComponentActorThread.run(ComponentActorThread.java:83)
+	at java.base@17.0.6/java.lang.Thread.run(Unknown Source)
+
+"EMF Reference Cleaner" daemon prio=5 Id=21 WAITING on java.lang.ref.ReferenceQueue$Lock@5a84db39
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@5a84db39
+	at java.base@17.0.6/java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at java.base@17.0.6/java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at org.eclipse.emf.common.util.CommonUtil$1ReferenceClearingQueuePollingThread.run(CommonUtil.java:80)
+
+"Gogo shell" prio=5 Id=23 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@7cf96761
+	at java.base@17.0.6/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@7cf96761
+	at java.base@17.0.6/java.util.concurrent.locks.LockSupport.park(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.ForkJoinPool.unmanagedBlock(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.ForkJoinPool.managedBlock(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+	...
+
+"Worker-JM" prio=5 Id=26 WAITING on java.util.ArrayList@b31186
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on java.util.ArrayList@b31186
+	at org.eclipse.core.internal.jobs.InternalWorker.run(InternalWorker.java:61)
+
+"Database navigator events processor" prio=5 Id=27 TIMED_WAITING
+	at java.base@17.0.6/java.lang.Thread.sleep(Native Method)
+	at org.jkiss.dbeaver.utils.RuntimeUtils.pause(RuntimeUtils.java:174)
+	at org.jkiss.dbeaver.model.navigator.DBNModel$EventProcessingJob.run(DBNModel.java:630)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+"Worker-1" prio=5 Id=28 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-2" prio=5 Id=29 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"idle-timeout-task" daemon prio=6 Id=31 TIMED_WAITING on java.util.TaskQueue@38618f8b
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on java.util.TaskQueue@38618f8b
+	at java.base@17.0.6/java.util.TimerThread.mainLoop(Unknown Source)
+	at java.base@17.0.6/java.util.TimerThread.run(Unknown Source)
+
+"HTTP-Dispatcher" prio=6 Id=32 RUNNABLE (in native)
+	at java.base@17.0.6/sun.nio.ch.EPoll.wait(Native Method)
+	at java.base@17.0.6/sun.nio.ch.EPollSelectorImpl.doSelect(Unknown Source)
+	at java.base@17.0.6/sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	-  locked sun.nio.ch.Util$2@f142589
+	-  locked sun.nio.ch.EPollSelectorImpl@55783012
+	at java.base@17.0.6/sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at platform/jdk.httpserver@17.0.6/sun.net.httpserver.ServerImpl$Dispatcher.run(Unknown Source)
+	at java.base@17.0.6/java.lang.Thread.run(Unknown Source)
+
+"Worker-3" prio=5 Id=33 RUNNABLE
+	at java.base@17.0.6/java.util.Collections$SingletonMap.values(Unknown Source)
+	at java.management@17.0.6/sun.management.spi.PlatformMBeanProvider$PlatformComponent.getMBeans(Unknown Source)
+	at java.management@17.0.6/java.lang.management.ManagementFactory.getPlatformMXBean(Unknown Source)
+	at java.management@17.0.6/java.lang.management.ManagementFactory.getThreadMXBean(Unknown Source)
+	at org.eclipse.core.internal.jobs.JobListeners.waitAndSendEvents(JobListeners.java:120)
+	at org.eclipse.core.internal.jobs.JobManager.startJob(JobManager.java:1787)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:244)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-4" prio=5 Id=34 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Bundle File Closer" daemon prio=6 Id=35 WAITING on org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@6151e0e1
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@6151e0e1
+	at java.base@17.0.6/java.lang.Object.wait(Unknown Source)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.getNextEvent(EventManager.java:396)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:337)
+
+"EventAdmin Async Event Dispatcher Thread" daemon prio=6 Id=37 WAITING on org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@4f47a92f
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@4f47a92f
+	at java.base@17.0.6/java.lang.Object.wait(Unknown Source)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.getNextEvent(EventManager.java:396)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:337)
+
+"pool-2-thread-1" prio=5 Id=38 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@412c1f41
+	at java.base@17.0.6/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@412c1f41
+	at java.base@17.0.6/java.util.concurrent.locks.LockSupport.park(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.ForkJoinPool.unmanagedBlock(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.ForkJoinPool.managedBlock(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+	...
+
+"pool-3-thread-1" prio=5 Id=39 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@55c04fd6
+	at java.base@17.0.6/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@55c04fd6
+	at java.base@17.0.6/java.util.concurrent.locks.LockSupport.park(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.ForkJoinPool.unmanagedBlock(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.ForkJoinPool.managedBlock(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+	...
+
+"Java2D Disposer" daemon prio=10 Id=41 WAITING on java.lang.ref.ReferenceQueue$Lock@3bf8fb67
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@3bf8fb67
+	at java.base@17.0.6/java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at java.base@17.0.6/java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at java.desktop@17.0.6/sun.java2d.Disposer.run(Unknown Source)
+	at java.base@17.0.6/java.lang.Thread.run(Unknown Source)
+
+"AWT-XAWT" daemon prio=6 Id=42 RUNNABLE
+	at java.desktop@17.0.6/sun.awt.X11.XToolkit.waitForEvents(Native Method)
+	at java.desktop@17.0.6/sun.awt.X11.XToolkit.run(Unknown Source)
+	at java.desktop@17.0.6/sun.awt.X11.XToolkit.run(Unknown Source)
+	at java.base@17.0.6/java.lang.Thread.run(Unknown Source)
+
+"Worker-5" prio=5 Id=50 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-6" prio=5 Id=51 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-7" prio=5 Id=92 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-8" prio=5 Id=134 RUNNABLE
+	at java.base@17.0.6/java.util.Collections$SingletonMap.values(Unknown Source)
+	at java.management@17.0.6/sun.management.spi.PlatformMBeanProvider$PlatformComponent.getMBeans(Unknown Source)
+	at java.management@17.0.6/java.lang.management.ManagementFactory.getPlatformMXBean(Unknown Source)
+	at java.management@17.0.6/java.lang.management.ManagementFactory.getThreadMXBean(Unknown Source)
+	at org.eclipse.core.internal.jobs.JobListeners.waitAndSendEvents(JobListeners.java:120)
+	at org.eclipse.core.internal.jobs.JobManager.startJob(JobManager.java:1787)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:244)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-9" prio=5 Id=135 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-10" prio=5 Id=560 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-11" prio=5 Id=561 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-12" prio=5 Id=562 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-13" prio=5 Id=1121 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"org.eclipse.jface.text.reconciler.MonoReconciler" daemon prio=1 Id=1252 TIMED_WAITING on org.eclipse.jface.text.reconciler.DirtyRegionQueue@490423e6
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.jface.text.reconciler.DirtyRegionQueue@490423e6
+	at org.eclipse.jface.text.reconciler.AbstractReconciler.delay(AbstractReconciler.java:572)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:181)
+
+"Worker-14" prio=5 Id=1288 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"PostgreSQL-JDBC-Cleaner" daemon prio=5 Id=1317 TIMED_WAITING on java.lang.ref.ReferenceQueue$Lock@68f3fb90
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@68f3fb90
+	at java.base@17.0.6/java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at org.postgresql.util.LazyCleaner$1.run(LazyCleaner.java:129)
+	at java.base@17.0.6/java.lang.Thread.run(Unknown Source)
+
+"Worker-15" prio=5 Id=1658 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-16" prio=5 Id=2036 RUNNABLE
+	at java.management@17.0.6/sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at java.management@17.0.6/sun.management.ThreadImpl.dumpAllThreads(Unknown Source)
+	at java.management@17.0.6/sun.management.ThreadImpl.dumpAllThreads(Unknown Source)
+	at org.eclipse.core.internal.jobs.JobListeners.waitAndSendEvents(JobListeners.java:120)
+	at org.eclipse.core.internal.jobs.JobManager.startJob(JobManager.java:1787)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:244)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-17" prio=5 Id=2060 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"org.eclipse.jface.text.reconciler.MonoReconciler" daemon prio=1 Id=2923 TIMED_WAITING on org.eclipse.jface.text.reconciler.DirtyRegionQueue@3f1aa7a7
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.jface.text.reconciler.DirtyRegionQueue@3f1aa7a7
+	at org.eclipse.jface.text.reconciler.AbstractReconciler.delay(AbstractReconciler.java:572)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:181)
+
+"org.eclipse.jface.text.reconciler.MonoReconciler" daemon prio=1 Id=2929 TIMED_WAITING on org.eclipse.jface.text.reconciler.DirtyRegionQueue@43c550e0
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.jface.text.reconciler.DirtyRegionQueue@43c550e0
+	at org.eclipse.jface.text.reconciler.AbstractReconciler.delay(AbstractReconciler.java:572)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:181)
+
+"org.eclipse.jface.text.reconciler.MonoReconciler" daemon prio=1 Id=3149 TIMED_WAITING on org.eclipse.jface.text.reconciler.DirtyRegionQueue@2b36506d
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.jface.text.reconciler.DirtyRegionQueue@2b36506d
+	at org.eclipse.jface.text.reconciler.AbstractReconciler.delay(AbstractReconciler.java:572)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:181)
+
+"Worker-18" prio=5 Id=3294 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-19" prio=5 Id=3538 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-20" prio=5 Id=3540 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-21" prio=5 Id=3541 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-22" prio=5 Id=3542 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-23" prio=5 Id=3543 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+
+
+!ENTRY org.eclipse.core.jobs 4 2 2024-10-11 20:22:34.303
+!MESSAGE IJobChangeListener timeout detected. Further calls to IJobChangeListener may occur in random order and join(family) can return too soon. IJobChangeListener should return within 3000 ms. IJobChangeListener methods should not block. Possible deadlock.
+!STACK 0
+java.util.concurrent.TimeoutException: IJobChangeListener timeout detected. Further calls to IJobChangeListener may occur in random order and join(family) can return too soon. IJobChangeListener should return within 3000 ms. IJobChangeListener methods should not block. Possible deadlock.
+	at org.eclipse.core.internal.jobs.JobListeners.waitAndSendEvents(JobListeners.java:106)
+	at org.eclipse.core.internal.jobs.JobManager.startJob(JobManager.java:1787)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:244)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+!SUBENTRY 1 org.eclipse.core.jobs 4 2 2024-10-11 20:22:34.303
+!MESSAGE Thread that is running the IJobChangeListener: Worker-11: Dump server output
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+All thread infos: 
+"main" prio=6 Id=1 RUNNABLE
+	at org.eclipse.swt.internal.gtk3.GTK3.gtk_main_iteration_do(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4514)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:639)
+	at org.eclipse.ui.internal.Workbench$$Lambda$250/0x00000001003bea80.run(Unknown Source)
+	...
+
+"Reference Handler" daemon prio=10 Id=2 RUNNABLE
+	at java.base@17.0.6/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+	at java.base@17.0.6/java.lang.ref.Reference.processPendingReferences(Unknown Source)
+	at java.base@17.0.6/java.lang.ref.Reference$ReferenceHandler.run(Unknown Source)
+
+"Finalizer" daemon prio=8 Id=3 WAITING on java.lang.ref.ReferenceQueue$Lock@29894bb7
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@29894bb7
+	at java.base@17.0.6/java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at java.base@17.0.6/java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at java.base@17.0.6/java.lang.ref.Finalizer$FinalizerThread.run(Unknown Source)
+
+"Signal Dispatcher" daemon prio=9 Id=4 RUNNABLE
+
+"Common-Cleaner" daemon prio=8 Id=12 TIMED_WAITING on java.lang.ref.ReferenceQueue$Lock@2fb4cf67
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@2fb4cf67
+	at java.base@17.0.6/java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at java.base@17.0.6/jdk.internal.ref.CleanerImpl.run(Unknown Source)
+	at java.base@17.0.6/java.lang.Thread.run(Unknown Source)
+	at java.base@17.0.6/jdk.internal.misc.InnocuousThread.run(Unknown Source)
+
+"Notification Thread" daemon prio=9 Id=13 RUNNABLE
+
+"Active Thread: Equinox Container: 3952fa38-74c2-4e5d-911d-0c37a16917b7" prio=5 Id=15 TIMED_WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@135868ae
+	at java.base@17.0.6/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@135868ae
+	at java.base@17.0.6/java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	...
+
+"Framework Event Dispatcher: Equinox Container: 3952fa38-74c2-4e5d-911d-0c37a16917b7" daemon prio=5 Id=17 WAITING on org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@6038dc74
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@6038dc74
+	at java.base@17.0.6/java.lang.Object.wait(Unknown Source)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.getNextEvent(EventManager.java:396)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:337)
+
+"Start Level: Equinox Container: 3952fa38-74c2-4e5d-911d-0c37a16917b7" daemon prio=5 Id=18 WAITING on org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@38ff737
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@38ff737
+	at java.base@17.0.6/java.lang.Object.wait(Unknown Source)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.getNextEvent(EventManager.java:396)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:337)
+
+"SCR Component Actor" daemon prio=5 Id=19 WAITING on java.util.LinkedList@ac9cfd6
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on java.util.LinkedList@ac9cfd6
+	at java.base@17.0.6/java.lang.Object.wait(Unknown Source)
+	at org.apache.felix.scr.impl.ComponentActorThread.run(ComponentActorThread.java:83)
+	at java.base@17.0.6/java.lang.Thread.run(Unknown Source)
+
+"EMF Reference Cleaner" daemon prio=5 Id=21 WAITING on java.lang.ref.ReferenceQueue$Lock@5a84db39
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@5a84db39
+	at java.base@17.0.6/java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at java.base@17.0.6/java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at org.eclipse.emf.common.util.CommonUtil$1ReferenceClearingQueuePollingThread.run(CommonUtil.java:80)
+
+"Gogo shell" prio=5 Id=23 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@7cf96761
+	at java.base@17.0.6/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@7cf96761
+	at java.base@17.0.6/java.util.concurrent.locks.LockSupport.park(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.ForkJoinPool.unmanagedBlock(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.ForkJoinPool.managedBlock(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+	...
+
+"Worker-JM" prio=5 Id=26 WAITING on java.util.ArrayList@b31186
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on java.util.ArrayList@b31186
+	at org.eclipse.core.internal.jobs.InternalWorker.run(InternalWorker.java:61)
+
+"Database navigator events processor" prio=5 Id=27 TIMED_WAITING
+	at java.base@17.0.6/java.lang.Thread.sleep(Native Method)
+	at org.jkiss.dbeaver.utils.RuntimeUtils.pause(RuntimeUtils.java:174)
+	at org.jkiss.dbeaver.model.navigator.DBNModel$EventProcessingJob.run(DBNModel.java:630)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+"Worker-1" prio=5 Id=28 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-2" prio=5 Id=29 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"idle-timeout-task" daemon prio=6 Id=31 TIMED_WAITING on java.util.TaskQueue@38618f8b
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on java.util.TaskQueue@38618f8b
+	at java.base@17.0.6/java.util.TimerThread.mainLoop(Unknown Source)
+	at java.base@17.0.6/java.util.TimerThread.run(Unknown Source)
+
+"HTTP-Dispatcher" prio=6 Id=32 RUNNABLE (in native)
+	at java.base@17.0.6/sun.nio.ch.EPoll.wait(Native Method)
+	at java.base@17.0.6/sun.nio.ch.EPollSelectorImpl.doSelect(Unknown Source)
+	at java.base@17.0.6/sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	-  locked sun.nio.ch.Util$2@f142589
+	-  locked sun.nio.ch.EPollSelectorImpl@55783012
+	at java.base@17.0.6/sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at platform/jdk.httpserver@17.0.6/sun.net.httpserver.ServerImpl$Dispatcher.run(Unknown Source)
+	at java.base@17.0.6/java.lang.Thread.run(Unknown Source)
+
+"Worker-3" prio=5 Id=33 RUNNABLE
+	at java.management@17.0.6/sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at java.management@17.0.6/sun.management.ThreadImpl.dumpAllThreads(Unknown Source)
+	at java.management@17.0.6/sun.management.ThreadImpl.dumpAllThreads(Unknown Source)
+	at org.eclipse.core.internal.jobs.JobListeners.waitAndSendEvents(JobListeners.java:120)
+	at org.eclipse.core.internal.jobs.JobManager.startJob(JobManager.java:1787)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:244)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-4" prio=5 Id=34 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Bundle File Closer" daemon prio=6 Id=35 WAITING on org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@6151e0e1
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@6151e0e1
+	at java.base@17.0.6/java.lang.Object.wait(Unknown Source)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.getNextEvent(EventManager.java:396)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:337)
+
+"EventAdmin Async Event Dispatcher Thread" daemon prio=6 Id=37 WAITING on org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@4f47a92f
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@4f47a92f
+	at java.base@17.0.6/java.lang.Object.wait(Unknown Source)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.getNextEvent(EventManager.java:396)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:337)
+
+"pool-2-thread-1" prio=5 Id=38 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@412c1f41
+	at java.base@17.0.6/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@412c1f41
+	at java.base@17.0.6/java.util.concurrent.locks.LockSupport.park(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.ForkJoinPool.unmanagedBlock(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.ForkJoinPool.managedBlock(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+	...
+
+"pool-3-thread-1" prio=5 Id=39 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@55c04fd6
+	at java.base@17.0.6/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@55c04fd6
+	at java.base@17.0.6/java.util.concurrent.locks.LockSupport.park(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.ForkJoinPool.unmanagedBlock(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.ForkJoinPool.managedBlock(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+	...
+
+"Java2D Disposer" daemon prio=10 Id=41 WAITING on java.lang.ref.ReferenceQueue$Lock@3bf8fb67
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@3bf8fb67
+	at java.base@17.0.6/java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at java.base@17.0.6/java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at java.desktop@17.0.6/sun.java2d.Disposer.run(Unknown Source)
+	at java.base@17.0.6/java.lang.Thread.run(Unknown Source)
+
+"AWT-XAWT" daemon prio=6 Id=42 RUNNABLE (in native)
+	at java.desktop@17.0.6/sun.awt.X11.XToolkit.waitForEvents(Native Method)
+	at java.desktop@17.0.6/sun.awt.X11.XToolkit.run(Unknown Source)
+	at java.desktop@17.0.6/sun.awt.X11.XToolkit.run(Unknown Source)
+	at java.base@17.0.6/java.lang.Thread.run(Unknown Source)
+
+"Worker-5" prio=5 Id=50 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-6" prio=5 Id=51 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-7" prio=5 Id=92 RUNNABLE
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-8" prio=5 Id=134 RUNNABLE
+	at java.management@17.0.6/sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at java.management@17.0.6/sun.management.ThreadImpl.dumpAllThreads(Unknown Source)
+	at java.management@17.0.6/sun.management.ThreadImpl.dumpAllThreads(Unknown Source)
+	at org.eclipse.core.internal.jobs.JobListeners.waitAndSendEvents(JobListeners.java:120)
+	at org.eclipse.core.internal.jobs.JobManager.startJob(JobManager.java:1787)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:244)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-9" prio=5 Id=135 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-10" prio=5 Id=560 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-11" prio=5 Id=561 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-12" prio=5 Id=562 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-13" prio=5 Id=1121 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"org.eclipse.jface.text.reconciler.MonoReconciler" daemon prio=1 Id=1252 TIMED_WAITING on org.eclipse.jface.text.reconciler.DirtyRegionQueue@490423e6
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.jface.text.reconciler.DirtyRegionQueue@490423e6
+	at org.eclipse.jface.text.reconciler.AbstractReconciler.delay(AbstractReconciler.java:572)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:181)
+
+"Worker-14" prio=5 Id=1288 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"PostgreSQL-JDBC-Cleaner" daemon prio=5 Id=1317 TIMED_WAITING on java.lang.ref.ReferenceQueue$Lock@68f3fb90
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@68f3fb90
+	at java.base@17.0.6/java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at org.postgresql.util.LazyCleaner$1.run(LazyCleaner.java:129)
+	at java.base@17.0.6/java.lang.Thread.run(Unknown Source)
+
+"Worker-15" prio=5 Id=1658 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-16" prio=5 Id=2036 RUNNABLE
+	at java.management@17.0.6/sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at java.management@17.0.6/sun.management.ThreadImpl.dumpAllThreads(Unknown Source)
+	at java.management@17.0.6/sun.management.ThreadImpl.dumpAllThreads(Unknown Source)
+	at org.eclipse.core.internal.jobs.JobListeners.waitAndSendEvents(JobListeners.java:120)
+	at org.eclipse.core.internal.jobs.JobManager.startJob(JobManager.java:1787)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:244)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-17" prio=5 Id=2060 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"org.eclipse.jface.text.reconciler.MonoReconciler" daemon prio=1 Id=2923 TIMED_WAITING on org.eclipse.jface.text.reconciler.DirtyRegionQueue@3f1aa7a7
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.jface.text.reconciler.DirtyRegionQueue@3f1aa7a7
+	at org.eclipse.jface.text.reconciler.AbstractReconciler.delay(AbstractReconciler.java:572)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:181)
+
+"org.eclipse.jface.text.reconciler.MonoReconciler" daemon prio=1 Id=2929 TIMED_WAITING on org.eclipse.jface.text.reconciler.DirtyRegionQueue@43c550e0
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.jface.text.reconciler.DirtyRegionQueue@43c550e0
+	at org.eclipse.jface.text.reconciler.AbstractReconciler.delay(AbstractReconciler.java:572)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:181)
+
+"org.eclipse.jface.text.reconciler.MonoReconciler" daemon prio=1 Id=3149 TIMED_WAITING on org.eclipse.jface.text.reconciler.DirtyRegionQueue@2b36506d
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.jface.text.reconciler.DirtyRegionQueue@2b36506d
+	at org.eclipse.jface.text.reconciler.AbstractReconciler.delay(AbstractReconciler.java:572)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:181)
+
+"Worker-18" prio=5 Id=3294 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-19" prio=5 Id=3538 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-20" prio=5 Id=3540 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-21" prio=5 Id=3541 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-22" prio=5 Id=3542 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-23" prio=5 Id=3543 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+
+
+!ENTRY org.eclipse.core.jobs 4 2 2024-10-11 20:22:34.303
+!MESSAGE IJobChangeListener timeout detected. Further calls to IJobChangeListener may occur in random order and join(family) can return too soon. IJobChangeListener should return within 3000 ms. IJobChangeListener methods should not block. Possible deadlock.
+!STACK 0
+java.util.concurrent.TimeoutException: IJobChangeListener timeout detected. Further calls to IJobChangeListener may occur in random order and join(family) can return too soon. IJobChangeListener should return within 3000 ms. IJobChangeListener methods should not block. Possible deadlock.
+	at org.eclipse.core.internal.jobs.JobListeners.waitAndSendEvents(JobListeners.java:106)
+	at org.eclipse.core.internal.jobs.JobManager.startJob(JobManager.java:1787)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:244)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+!SUBENTRY 1 org.eclipse.core.jobs 4 2 2024-10-11 20:22:34.303
+!MESSAGE Thread that is running the IJobChangeListener: Worker-12
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+All thread infos: 
+"main" prio=6 Id=1 RUNNABLE
+	at org.eclipse.swt.internal.gtk.OS.Call(Native Method)
+	at org.eclipse.swt.widgets.Display.sleep(Display.java:5641)
+	at org.eclipse.ui.application.WorkbenchAdvisor.eventLoopIdle(WorkbenchAdvisor.java:339)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.eventLoopIdle(IDEWorkbenchAdvisor.java:993)
+	at org.jkiss.dbeaver.ui.app.standalone.ApplicationWorkbenchAdvisor.eventLoopIdle(ApplicationWorkbenchAdvisor.java:506)
+	at org.eclipse.ui.internal.Workbench$1.eventLoopIdle(Workbench.java:474)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1156)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	...
+
+"Reference Handler" daemon prio=10 Id=2 RUNNABLE
+	at java.base@17.0.6/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+	at java.base@17.0.6/java.lang.ref.Reference.processPendingReferences(Unknown Source)
+	at java.base@17.0.6/java.lang.ref.Reference$ReferenceHandler.run(Unknown Source)
+
+"Finalizer" daemon prio=8 Id=3 WAITING on java.lang.ref.ReferenceQueue$Lock@29894bb7
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@29894bb7
+	at java.base@17.0.6/java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at java.base@17.0.6/java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at java.base@17.0.6/java.lang.ref.Finalizer$FinalizerThread.run(Unknown Source)
+
+"Signal Dispatcher" daemon prio=9 Id=4 RUNNABLE
+
+"Common-Cleaner" daemon prio=8 Id=12 TIMED_WAITING on java.lang.ref.ReferenceQueue$Lock@2fb4cf67
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@2fb4cf67
+	at java.base@17.0.6/java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at java.base@17.0.6/jdk.internal.ref.CleanerImpl.run(Unknown Source)
+	at java.base@17.0.6/java.lang.Thread.run(Unknown Source)
+	at java.base@17.0.6/jdk.internal.misc.InnocuousThread.run(Unknown Source)
+
+"Notification Thread" daemon prio=9 Id=13 RUNNABLE
+
+"Active Thread: Equinox Container: 3952fa38-74c2-4e5d-911d-0c37a16917b7" prio=5 Id=15 TIMED_WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@135868ae
+	at java.base@17.0.6/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@135868ae
+	at java.base@17.0.6/java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	...
+
+"Framework Event Dispatcher: Equinox Container: 3952fa38-74c2-4e5d-911d-0c37a16917b7" daemon prio=5 Id=17 WAITING on org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@6038dc74
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@6038dc74
+	at java.base@17.0.6/java.lang.Object.wait(Unknown Source)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.getNextEvent(EventManager.java:396)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:337)
+
+"Start Level: Equinox Container: 3952fa38-74c2-4e5d-911d-0c37a16917b7" daemon prio=5 Id=18 WAITING on org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@38ff737
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@38ff737
+	at java.base@17.0.6/java.lang.Object.wait(Unknown Source)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.getNextEvent(EventManager.java:396)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:337)
+
+"SCR Component Actor" daemon prio=5 Id=19 WAITING on java.util.LinkedList@ac9cfd6
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on java.util.LinkedList@ac9cfd6
+	at java.base@17.0.6/java.lang.Object.wait(Unknown Source)
+	at org.apache.felix.scr.impl.ComponentActorThread.run(ComponentActorThread.java:83)
+	at java.base@17.0.6/java.lang.Thread.run(Unknown Source)
+
+"EMF Reference Cleaner" daemon prio=5 Id=21 WAITING on java.lang.ref.ReferenceQueue$Lock@5a84db39
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@5a84db39
+	at java.base@17.0.6/java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at java.base@17.0.6/java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at org.eclipse.emf.common.util.CommonUtil$1ReferenceClearingQueuePollingThread.run(CommonUtil.java:80)
+
+"Gogo shell" prio=5 Id=23 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@7cf96761
+	at java.base@17.0.6/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@7cf96761
+	at java.base@17.0.6/java.util.concurrent.locks.LockSupport.park(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.ForkJoinPool.unmanagedBlock(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.ForkJoinPool.managedBlock(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+	...
+
+"Worker-JM" prio=5 Id=26 WAITING on java.util.ArrayList@b31186
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on java.util.ArrayList@b31186
+	at org.eclipse.core.internal.jobs.InternalWorker.run(InternalWorker.java:61)
+
+"Database navigator events processor" prio=5 Id=27 TIMED_WAITING
+	at java.base@17.0.6/java.lang.Thread.sleep(Native Method)
+	at org.jkiss.dbeaver.utils.RuntimeUtils.pause(RuntimeUtils.java:174)
+	at org.jkiss.dbeaver.model.navigator.DBNModel$EventProcessingJob.run(DBNModel.java:630)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+"Worker-1" prio=5 Id=28 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-2" prio=5 Id=29 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"idle-timeout-task" daemon prio=6 Id=31 TIMED_WAITING on java.util.TaskQueue@38618f8b
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on java.util.TaskQueue@38618f8b
+	at java.base@17.0.6/java.util.TimerThread.mainLoop(Unknown Source)
+	at java.base@17.0.6/java.util.TimerThread.run(Unknown Source)
+
+"HTTP-Dispatcher" prio=6 Id=32 RUNNABLE (in native)
+	at java.base@17.0.6/sun.nio.ch.EPoll.wait(Native Method)
+	at java.base@17.0.6/sun.nio.ch.EPollSelectorImpl.doSelect(Unknown Source)
+	at java.base@17.0.6/sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	-  locked sun.nio.ch.Util$2@f142589
+	-  locked sun.nio.ch.EPollSelectorImpl@55783012
+	at java.base@17.0.6/sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at platform/jdk.httpserver@17.0.6/sun.net.httpserver.ServerImpl$Dispatcher.run(Unknown Source)
+	at java.base@17.0.6/java.lang.Thread.run(Unknown Source)
+
+"Worker-3" prio=5 Id=33 RUNNABLE
+	at java.management@17.0.6/sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at java.management@17.0.6/sun.management.ThreadImpl.dumpAllThreads(Unknown Source)
+	at java.management@17.0.6/sun.management.ThreadImpl.dumpAllThreads(Unknown Source)
+	at org.eclipse.core.internal.jobs.JobListeners.waitAndSendEvents(JobListeners.java:120)
+	at org.eclipse.core.internal.jobs.JobManager.startJob(JobManager.java:1787)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:244)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-4" prio=5 Id=34 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Bundle File Closer" daemon prio=6 Id=35 WAITING on org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@6151e0e1
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@6151e0e1
+	at java.base@17.0.6/java.lang.Object.wait(Unknown Source)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.getNextEvent(EventManager.java:396)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:337)
+
+"EventAdmin Async Event Dispatcher Thread" daemon prio=6 Id=37 WAITING on org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@4f47a92f
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@4f47a92f
+	at java.base@17.0.6/java.lang.Object.wait(Unknown Source)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.getNextEvent(EventManager.java:396)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:337)
+
+"pool-2-thread-1" prio=5 Id=38 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@412c1f41
+	at java.base@17.0.6/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@412c1f41
+	at java.base@17.0.6/java.util.concurrent.locks.LockSupport.park(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.ForkJoinPool.unmanagedBlock(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.ForkJoinPool.managedBlock(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+	...
+
+"pool-3-thread-1" prio=5 Id=39 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@55c04fd6
+	at java.base@17.0.6/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@55c04fd6
+	at java.base@17.0.6/java.util.concurrent.locks.LockSupport.park(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.ForkJoinPool.unmanagedBlock(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.ForkJoinPool.managedBlock(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
+	at java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+	...
+
+"Java2D Disposer" daemon prio=10 Id=41 WAITING on java.lang.ref.ReferenceQueue$Lock@3bf8fb67
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@3bf8fb67
+	at java.base@17.0.6/java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at java.base@17.0.6/java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at java.desktop@17.0.6/sun.java2d.Disposer.run(Unknown Source)
+	at java.base@17.0.6/java.lang.Thread.run(Unknown Source)
+
+"AWT-XAWT" daemon prio=6 Id=42 RUNNABLE (in native)
+	at java.desktop@17.0.6/sun.awt.X11.XToolkit.waitForEvents(Native Method)
+	at java.desktop@17.0.6/sun.awt.X11.XToolkit.run(Unknown Source)
+	at java.desktop@17.0.6/sun.awt.X11.XToolkit.run(Unknown Source)
+	at java.base@17.0.6/java.lang.Thread.run(Unknown Source)
+
+"Worker-5" prio=5 Id=50 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-6" prio=5 Id=51 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-7" prio=5 Id=92 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-8" prio=5 Id=134 RUNNABLE
+	at java.management@17.0.6/sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at java.management@17.0.6/sun.management.ThreadImpl.dumpAllThreads(Unknown Source)
+	at java.management@17.0.6/sun.management.ThreadImpl.dumpAllThreads(Unknown Source)
+	at org.eclipse.core.internal.jobs.JobListeners.waitAndSendEvents(JobListeners.java:120)
+	at org.eclipse.core.internal.jobs.JobManager.startJob(JobManager.java:1787)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:244)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-9" prio=5 Id=135 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-10" prio=5 Id=560 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-11" prio=5 Id=561 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-12" prio=5 Id=562 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-13" prio=5 Id=1121 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"org.eclipse.jface.text.reconciler.MonoReconciler" daemon prio=1 Id=1252 TIMED_WAITING on org.eclipse.jface.text.reconciler.DirtyRegionQueue@490423e6
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.jface.text.reconciler.DirtyRegionQueue@490423e6
+	at org.eclipse.jface.text.reconciler.AbstractReconciler.delay(AbstractReconciler.java:572)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:181)
+
+"Worker-14" prio=5 Id=1288 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"PostgreSQL-JDBC-Cleaner" daemon prio=5 Id=1317 TIMED_WAITING on java.lang.ref.ReferenceQueue$Lock@68f3fb90
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@68f3fb90
+	at java.base@17.0.6/java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at org.postgresql.util.LazyCleaner$1.run(LazyCleaner.java:129)
+	at java.base@17.0.6/java.lang.Thread.run(Unknown Source)
+
+"Worker-15" prio=5 Id=1658 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-16" prio=5 Id=2036 RUNNABLE
+	at java.management@17.0.6/java.lang.management.ThreadInfo.<clinit>(Unknown Source)
+	at java.management@17.0.6/sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at java.management@17.0.6/sun.management.ThreadImpl.dumpAllThreads(Unknown Source)
+	at java.management@17.0.6/sun.management.ThreadImpl.dumpAllThreads(Unknown Source)
+	at org.eclipse.core.internal.jobs.JobListeners.waitAndSendEvents(JobListeners.java:120)
+	at org.eclipse.core.internal.jobs.JobManager.startJob(JobManager.java:1787)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:244)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-17" prio=5 Id=2060 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"org.eclipse.jface.text.reconciler.MonoReconciler" daemon prio=1 Id=2923 TIMED_WAITING on org.eclipse.jface.text.reconciler.DirtyRegionQueue@3f1aa7a7
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.jface.text.reconciler.DirtyRegionQueue@3f1aa7a7
+	at org.eclipse.jface.text.reconciler.AbstractReconciler.delay(AbstractReconciler.java:572)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:181)
+
+"org.eclipse.jface.text.reconciler.MonoReconciler" daemon prio=1 Id=2929 TIMED_WAITING on org.eclipse.jface.text.reconciler.DirtyRegionQueue@43c550e0
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.jface.text.reconciler.DirtyRegionQueue@43c550e0
+	at org.eclipse.jface.text.reconciler.AbstractReconciler.delay(AbstractReconciler.java:572)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:181)
+
+"org.eclipse.jface.text.reconciler.MonoReconciler" daemon prio=1 Id=3149 TIMED_WAITING on org.eclipse.jface.text.reconciler.DirtyRegionQueue@2b36506d
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.jface.text.reconciler.DirtyRegionQueue@2b36506d
+	at org.eclipse.jface.text.reconciler.AbstractReconciler.delay(AbstractReconciler.java:572)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:181)
+
+"Worker-18" prio=5 Id=3294 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-19" prio=5 Id=3538 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-20" prio=5 Id=3540 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-21" prio=5 Id=3541 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-22" prio=5 Id=3542 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-23" prio=5 Id=3543 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at java.base@17.0.6/java.lang.Object.wait(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@44c0d939
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-10-11 20:39:00.570
+!MESSAGE SQL Error [42601]: ERROR: syntax error at or near "("
+  Position: 125
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-10-11 20:39:00.570
+!MESSAGE ERROR: syntax error at or near "("
+  Position: 125
+!STACK 0
+org.postgresql.util.PSQLException: ERROR: syntax error at or near "("
+  Position: 125
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:297)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:332)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:131)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:631)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:522)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:541)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1001)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4238)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-10-11 20:40:06.644
+!MESSAGE SQL Error [42601]: ERROR: syntax error at or near "("
+  Position: 124
+
+Error position: line: 79 pos: 123
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-10-11 20:40:06.644
+!MESSAGE SQL Error [42601]: ERROR: syntax error at or near "("
+  Position: 124
+!SUBENTRY 2 org.jkiss.dbeaver.model 4 0 2024-10-11 20:40:06.644
+!MESSAGE ERROR: syntax error at or near "("
+  Position: 124
+!STACK 0
+org.postgresql.util.PSQLException: ERROR: syntax error at or near "("
+  Position: 124
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:297)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:332)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:131)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:631)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:522)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:541)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1001)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4238)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-10-11 20:40:30.358
+!MESSAGE SQL Error [42601]: ERROR: syntax error at or near "("
+  Position: 124
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-10-11 20:40:30.358
+!MESSAGE ERROR: syntax error at or near "("
+  Position: 124
+!STACK 0
+org.postgresql.util.PSQLException: ERROR: syntax error at or near "("
+  Position: 124
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:297)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:332)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:131)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:631)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:522)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:541)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1001)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4238)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-10-11 20:40:32.445
+!MESSAGE SQL Error [42601]: ERROR: syntax error at or near "("
+  Position: 124
+
+Error position: line: 79 pos: 123
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-10-11 20:40:32.445
+!MESSAGE SQL Error [42601]: ERROR: syntax error at or near "("
+  Position: 124
+!SUBENTRY 2 org.jkiss.dbeaver.model 4 0 2024-10-11 20:40:32.445
+!MESSAGE ERROR: syntax error at or near "("
+  Position: 124
+!STACK 0
+org.postgresql.util.PSQLException: ERROR: syntax error at or near "("
+  Position: 124
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:297)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:332)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:131)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:631)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:522)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:541)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1001)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4238)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)

@@ -112,7 +112,7 @@ CREATE TABLE complement (
 	
 	CONSTRAINT pk_cmp_complementId PRIMARY KEY (complementId),
 	CONSTRAINT un_cmp_name UNIQUE (name)
-);
+)
 
 SELECT * FROM client;
 

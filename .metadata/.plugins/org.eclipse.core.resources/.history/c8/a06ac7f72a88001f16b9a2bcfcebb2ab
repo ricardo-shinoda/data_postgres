@@ -76,16 +76,6 @@ SELECT * FROM profession;
 
 INSERT INTO nationality (nationalityId, name)
 VALUES
-(1, 'brazilian');
-
-
-INSERT INTO nationality (nationalityId, name)
-VALUES
-(2, 'italian'),
-(3, 'canadian'),
-(4, 'north american'),
-(5, 'swedish');
-
-SELECT * FROM nationality;
+(1, 'brazilian')
 
 

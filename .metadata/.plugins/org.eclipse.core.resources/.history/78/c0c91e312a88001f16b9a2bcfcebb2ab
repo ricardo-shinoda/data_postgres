@@ -72,20 +72,12 @@ VALUES
 
 SELECT * FROM profession;
 
-
-
-INSERT INTO nationality (nationalityId, name)
-VALUES
-(1, 'brazilian');
-
-
-INSERT INTO nationality (nationalityId, name)
-VALUES
-(2, 'italian'),
-(3, 'canadian'),
-(4, 'north american'),
-(5, 'swedish');
-
-SELECT * FROM nationality;
-
+CREATE TABLE nationality (
+	nationalityId integer NOT NULL,
+	name varchar(30) NOT NULL,
+	
+	CONSTRAINT pk_ncn_nacionalityId (nationalityId),
+	CONSTRAINT un_ncn_bane UNIQUE (name)
+	
+);
 

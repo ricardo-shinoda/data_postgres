@@ -68,24 +68,4 @@ VALUES
 (18, 'mechanic'),
 (19, 'musician'),
 (20, 'nurse'),
-(21, 'nutritionist');
-
-SELECT * FROM profession;
-
-
-
-INSERT INTO nationality (nationalityId, name)
-VALUES
-(1, 'brazilian');
-
-
-INSERT INTO nationality (nationalityId, name)
-VALUES
-(2, 'italian'),
-(3, 'canadian'),
-(4, 'north american'),
-(5, 'swedish');
-
-SELECT * FROM nationality;
-
-
+(21, 'nutritionist'),

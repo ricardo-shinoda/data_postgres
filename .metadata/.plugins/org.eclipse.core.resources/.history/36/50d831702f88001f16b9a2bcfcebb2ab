@@ -102,19 +102,9 @@ CREATE TABLE nationality (
 	name varchar(30) NOT NULL,
 	
 	CONSTRAINT pk_ncn_nationalityId PRIMARY KEY (nationalityId),
-	CONSTRAINT un_ncn_nane UNIQUE (name)
+	CONSTRAINT un_ncn_bane UNIQUE (name)
 	
 );
-
-CREATE TABLE complement (
-	complementId integer NOT NULL,
-	name varchar(30) NOT NULL,
-	
-	CONSTRAINT pk_cmp_complementId PRIMARY KEY (complementId),
-	CONSTRAINT un_cmp_name UNIQUE (name)
-);
-
-SELECT * FROM client;
 
 
 
