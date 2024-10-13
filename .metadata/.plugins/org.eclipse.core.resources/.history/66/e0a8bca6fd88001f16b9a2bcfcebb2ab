@@ -1,0 +1,30 @@
+SELECT * FROM client;
+
+ALTER TABLE client RENAME COLUMN profession TO professionId;
+
+
+ALTER TABLE client ALTER COLUMN professionId TO integer;
+--This update can not be done because the column already has some value.
+
+-- instead we will have to create a new column and delete this one.
+
+ALTER TABLE client DROP professionId;
+
+ALTER TABLE client ADD professionId integer; 
+
+-- fk = forign key
+ALTER TABLE client
+ADD CONSTRAINT fk_cln_professionId
+FOREIGN KEY (professionId)
+REFERENCES profession (professionId);
+
+UPDATE client SET professionId = 1 WHERE clientid IN (1, 2, 3, 4, 5);
+UPDATE client SET professionId = 2 WHERE clientid IN (6, 7, 8, 9, 10);
+UPDATE client SET professionId = 3 WHERE clientid IN (11, 12, 13, 14, 15);
+UPDATE client SET professionId = 4 WHERE clientid IN (16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30);
+UPDATE client SET professionId = 5 WHERE clientid IN (31, 32, 33, 34, 35, 36, 37, 38, 39, 40);
+UPDATE client SET professionId = 6 WHERE clientid IN (41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60);
+UPDATE client SET professionId = 7 WHERE clientid IN (61);
+
+
+UPDATE client SET professionId = 8 WHERE clientid IN (62);

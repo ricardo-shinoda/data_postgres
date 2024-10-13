@@ -1,0 +1,6 @@
+SELECT * FROM client;
+
+ALTER TABLE client RENAME COLUMN profession TO professionId;
+
+ALTER TABLE client ALTER COLUMN professionId TO integer;
+

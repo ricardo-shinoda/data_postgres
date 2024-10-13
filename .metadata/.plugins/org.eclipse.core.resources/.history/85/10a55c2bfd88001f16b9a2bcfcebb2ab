@@ -1,0 +1,10 @@
+SELECT * FROM client;
+
+ALTER TABLE client RENAME COLUMN profession TO professionId;
+
+
+ALTER TABLE client ALTER COLUMN professionId TO integer;
+--This update can not be done because the column already has some value.
+
+-- instead we will have to create a new column and delete this one.
+
