@@ -139,52 +139,8 @@ CREATE TABLE city (
 	CONSTRAINT pk_cty_cityid PRIMARY KEY (cityid),
 	CONSTRAINT un_cty_name UNIQUE (name),
 	CONSTRAINT fk_cty_stateid FOREIGN KEY (stateid) REFERENCES state (stateid)
-);
+)
 
--- create table Supplier
-
-CREATE TABLE supplier (
-	supplierid integer NOT NULL,
-	name varchar(50) NOT NULL,
-	
-	CONSTRAINT pk_spl_supplierid PRIMARY KEY (supplierid),
-	CONSTRAINT un_spl_name UNIQUE (name)
-);
-
-
--- create table seller
-CREATE TABLE seller (
-	sellerid integer NOT NULL,
-	name varchar(50) NOT NULL,
-	
-	CONSTRAINT pk_slr_sellerid PRIMARY KEY (sellerid),
-	CONSTRAINT un_slr_name UNIQUE (name)
-);
-
--- create table carrier
-CREATE TABLE carrier (
-	carrierid integer NOT NULL,
-	name varchar(50) NOT NULL,
-	street_name varchar(50),
-	house_number varchar(10),
-	cityid integer NOT NULL,
-	
-	CONSTRAINT pk_car_carrierid PRIMARY KEY (carrierid),
-	CONSTRAINT fk_car_cityid FOREIGN KEY (cityid) REFERENCES city (cityid)
-	
-);
-
--- create table product
-CREATE TABLE product (
-	productid integer NOT NULL,
-	name varchar(50) NOT NULL,
-	value decimal (10, 2) NOT NULL,
-	supplierid integer NOT NULL,
-	
-	CONSTRAINT pk_prd_productid PRIMARY KEY (productid),
-	CONSTRAINT fk_prd_supplierid FOREIGN KEY (supplierid) REFERENCES supplier (supplierid)
-	
-);
 
 
 

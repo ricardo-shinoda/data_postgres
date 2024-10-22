@@ -178,13 +178,9 @@ CREATE TABLE carrier (
 CREATE TABLE product (
 	productid integer NOT NULL,
 	name varchar(50) NOT NULL,
-	value decimal (10, 2) NOT NULL,
-	supplierid integer NOT NULL,
+	value float(10,2) NOT NULL,
 	
-	CONSTRAINT pk_prd_productid PRIMARY KEY (productid),
-	CONSTRAINT fk_prd_supplierid FOREIGN KEY (supplierid) REFERENCES supplier (supplierid)
-	
-);
+)
 
 
 

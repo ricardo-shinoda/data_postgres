@@ -287,28 +287,6 @@ VALUES
 (7, 'Aline'),
 (8, 'Silvana');
 
-INSERT INTO supplier (supplierid, name)
-VALUES
-(1, 'Cap. Computadores'),
-(2, 'AA. Computedores'),
-(3, 'BB. Máquinas');
-
-
-INSERT INTO carrier (carrierid, cityid, name, street_name, house_number)
-VALUES
-(1, 22, 'BS transportes', 'Rua das Limas', '01'),
-(2, 20, 'União transportes', NULL, NULL);
-
-INSERT INTO product (productid, supplierid, name, value)
-VALUES
-(1, 1, 'Microcomputador', 800),
-(2, 1, 'Monitor', 500),
-(3, 2, 'Motherboard', 200),
-(4, 2, 'HD', 150),
-(5, 2, 'Videoboard', 200),
-(6, 3, 'RAM memory', 100),
-(7, 1, 'Gabinete', 35);
-
 
 
 
