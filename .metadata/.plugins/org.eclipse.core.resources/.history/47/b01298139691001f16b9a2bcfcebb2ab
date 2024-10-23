@@ -197,18 +197,10 @@ CREATE TABLE orders (
 	clientid integer NOT NULL,
 	carrierid integer,
 	sellerid integer NOT NULL,
-	order_date date NOT NULL,
+	order_date DATA NOT NULL,
 	value numeric(10, 2) NOT NULL,
 	
-	CONSTRAINT pk_ord_orderid PRIMARY KEY (orderid),
-	CONSTRAINT fk_ord_clientid FOREIGN KEY (clientid) REFERENCES client (clientid),
-	CONSTRAINT fk_ord_carrierid FOREIGN KEY (carrierid) REFERENCES carrier (carrierid),
-	CONSTRAINT fk_ord_sellerid FOREIGN KEY	(sellerid) REFERENCES seller (sellerid)
-);
-
--- create table order_product
-
-
+)
 
 
 

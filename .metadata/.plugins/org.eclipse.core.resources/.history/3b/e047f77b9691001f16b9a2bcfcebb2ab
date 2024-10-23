@@ -206,10 +206,6 @@ CREATE TABLE orders (
 	CONSTRAINT fk_ord_sellerid FOREIGN KEY	(sellerid) REFERENCES seller (sellerid)
 );
 
--- create table order_product
-
-
-
 
 
 

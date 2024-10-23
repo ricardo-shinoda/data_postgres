@@ -4486,3 +4486,126 @@ java.lang.NullPointerException: Cannot invoke "org.jkiss.dbeaver.model.sql.seman
 2024-10-22 09:48:09.667 - Execution context closed (postgres, 70)
 2024-10-22 09:48:09.731 - Execution context closed (postgres, 71)
 2024-10-22 09:48:09.738 - Disconnected (postgres-jdbc-192696dc61e-27e03f1e851589e1)
+2024-10-23 20:14:39.514 - Connect with 'postgres' (postgres-jdbc-192696dc61e-27e03f1e851589e1)
+2024-10-23 20:14:39.538 - Execution context opened (postgres; Main <postgres>; 72)
+2024-10-23 20:14:39.538 - Initiate connection to PostgreSQL database [postgres@localhost] for Main <postgres>
+2024-10-23 20:14:39.554 - Execution context opened (postgres; Metadata <postgres>; 73)
+2024-10-23 20:14:39.554 - Initiate connection to PostgreSQL database [postgres@localhost] for Metadata <postgres>
+2024-10-23 20:14:39.585 - Connected (postgres-jdbc-192696dc61e-27e03f1e851589e1, PostgreSQL JDBC Driver [42.7.2])
+2024-10-23 20:14:39.585 - Execution context opened (postgres; SQLEditor <createTable.sql>; 74)
+2024-10-23 20:14:39.585 - Initiate connection to PostgreSQL database [postgres@localhost] for SQLEditor <createTable.sql>
+2024-10-23 20:14:39.586 - Execution context opened (postgres; SQLEditor <Select.sql>; 75)
+2024-10-23 20:14:39.586 - Execution context opened (postgres; SQLEditor <Insert-Update-delete-alter.sql>; 76)
+2024-10-23 20:14:39.636 - Initiate connection to PostgreSQL database [postgres@localhost] for SQLEditor <Select.sql>
+2024-10-23 20:14:39.687 - Initiate connection to PostgreSQL database [postgres@localhost] for SQLEditor <Insert-Update-delete-alter.sql>
+2024-10-23 20:24:49.502 - Error while analyzing query text: CREATE TABLE orders (
+	orderid integer NOT NULL,
+	clientid integer NOT NULL,
+	carrierid integer,
+	sellerid integer NOT NULL,
+	order_date DATA NOT NULL,
+	value numeric(10, 2) NOT NULL,
+	
+	CONSTRAINT pk_ord_orderid PRIMARY KEY (orderid),
+	CONSTRAINT fk_ord_clientid FOREIGN KEY ()
+	
+)
+java.lang.NullPointerException: Cannot invoke "org.jkiss.dbeaver.model.sql.semantics.SQLQuerySymbolEntry.isNotClassified()" because "columnRef" is null
+	at org.jkiss.dbeaver.model.sql.semantics.model.ddl.SQLQueryTableConstraintSpec.propagateContext(SQLQueryTableConstraintSpec.java:98)
+	at org.jkiss.dbeaver.model.sql.semantics.model.ddl.SQLQueryTableCreateModel.applyContext(SQLQueryTableCreateModel.java:121)
+	at org.jkiss.dbeaver.model.sql.semantics.model.SQLQueryModel.propagateContext(SQLQueryModel.java:80)
+	at org.jkiss.dbeaver.model.sql.semantics.SQLQueryModelRecognizer.recognizeQuery(SQLQueryModelRecognizer.java:156)
+	at org.jkiss.dbeaver.model.sql.semantics.SQLQueryModelRecognizer.recognizeQuery(SQLQueryModelRecognizer.java:934)
+	at org.jkiss.dbeaver.ui.editors.sql.semantics.SQLBackgroundParsingJob.doWork(SQLBackgroundParsingJob.java:588)
+	at org.jkiss.dbeaver.ui.editors.sql.semantics.SQLBackgroundParsingJob$1.run(SQLBackgroundParsingJob.java:97)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2024-10-23 20:25:59.515 - Error while analyzing query text: CREATE TABLE orders (
+	orderid integer NOT NULL,
+	clientid integer NOT NULL,
+	carrierid integer,
+	sellerid integer NOT NULL,
+	order_date DATA NOT NULL,
+	value numeric(10, 2) NOT NULL,
+	
+	CONSTRAINT pk_ord_orderid PRIMARY KEY (orderid),
+	CONSTRAINT fk_ord_clientid FOREIGN KEY (clientid) REFERENCES client (clientid),
+	CONSTRAINT fk_ord_carrierid FOREIGN KEY ()
+	
+)
+java.lang.NullPointerException: Cannot invoke "org.jkiss.dbeaver.model.sql.semantics.SQLQuerySymbolEntry.isNotClassified()" because "columnRef" is null
+	at org.jkiss.dbeaver.model.sql.semantics.model.ddl.SQLQueryTableConstraintSpec.propagateContext(SQLQueryTableConstraintSpec.java:98)
+	at org.jkiss.dbeaver.model.sql.semantics.model.ddl.SQLQueryTableCreateModel.applyContext(SQLQueryTableCreateModel.java:121)
+	at org.jkiss.dbeaver.model.sql.semantics.model.SQLQueryModel.propagateContext(SQLQueryModel.java:80)
+	at org.jkiss.dbeaver.model.sql.semantics.SQLQueryModelRecognizer.recognizeQuery(SQLQueryModelRecognizer.java:156)
+	at org.jkiss.dbeaver.model.sql.semantics.SQLQueryModelRecognizer.recognizeQuery(SQLQueryModelRecognizer.java:934)
+	at org.jkiss.dbeaver.ui.editors.sql.semantics.SQLBackgroundParsingJob.doWork(SQLBackgroundParsingJob.java:588)
+	at org.jkiss.dbeaver.ui.editors.sql.semantics.SQLBackgroundParsingJob$1.run(SQLBackgroundParsingJob.java:97)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2024-10-23 20:27:16.033 - SQL Error [42601]: ERROR: syntax error at or near ")"
+  Position: 484
+
+Error position: line: 207 pos: 483
+org.jkiss.dbeaver.model.sql.DBSQLException: SQL Error [42601]: ERROR: syntax error at or near ")"
+  Position: 484
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:133)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:631)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:522)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:541)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1001)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4238)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.postgresql.util.PSQLException: ERROR: syntax error at or near ")"
+  Position: 484
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:297)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:332)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:131)
+	... 12 more
+2024-10-23 20:27:27.365 - SQL Error [42704]: ERROR: type "data" does not exist
+  Position: 139
+
+Error position: line: 200 pos: 138
+org.jkiss.dbeaver.model.sql.DBSQLException: SQL Error [42704]: ERROR: type "data" does not exist
+  Position: 139
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:133)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:631)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:522)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:541)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1001)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4238)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.postgresql.util.PSQLException: ERROR: type "data" does not exist
+  Position: 139
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:297)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:332)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:131)
+	... 12 more

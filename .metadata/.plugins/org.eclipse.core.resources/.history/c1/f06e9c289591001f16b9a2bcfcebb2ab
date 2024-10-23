@@ -181,34 +181,13 @@ ADD CONSTRAINT un_car_name UNIQUE (name);
 CREATE TABLE product (
 	productid integer NOT NULL,
 	name varchar(50) NOT NULL,
-	value decimal (10, 2) NOT NULL, --could ALSO be "value float NOT NULL"
+	value decimal (10, 2) NOT NULL,
 	supplierid integer NOT NULL,
 	
 	CONSTRAINT pk_prd_productid PRIMARY KEY (productid),
 	CONSTRAINT fk_prd_supplierid FOREIGN KEY (supplierid) REFERENCES supplier (supplierid)
 	
 );
-
-
--- create table order
-
-CREATE TABLE orders (
-	orderid integer NOT NULL,
-	clientid integer NOT NULL,
-	carrierid integer,
-	sellerid integer NOT NULL,
-	order_date date NOT NULL,
-	value numeric(10, 2) NOT NULL,
-	
-	CONSTRAINT pk_ord_orderid PRIMARY KEY (orderid),
-	CONSTRAINT fk_ord_clientid FOREIGN KEY (clientid) REFERENCES client (clientid),
-	CONSTRAINT fk_ord_carrierid FOREIGN KEY (carrierid) REFERENCES carrier (carrierid),
-	CONSTRAINT fk_ord_sellerid FOREIGN KEY	(sellerid) REFERENCES seller (sellerid)
-);
-
--- create table order_product
-
-
 
 
 
