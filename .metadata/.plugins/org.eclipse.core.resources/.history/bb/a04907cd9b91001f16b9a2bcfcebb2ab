@@ -216,6 +216,7 @@ CREATE TABLE order_product (
 	
 	CONSTRAINT pk_ordProd_orderid_productid PRIMARY KEY (orderid, productid),
 	CONSTRAINT fk_ordProd_orderid FOREIGN KEY (orderid) REFERENCES orders (orderid),
+--	CONSTRAINT pk_ordProd_productid PRIMARY KEY (productid),
 	CONSTRAINT fk_ordProd_productid FOREIGN KEY (productid) REFERENCES product (productid)
 );
 

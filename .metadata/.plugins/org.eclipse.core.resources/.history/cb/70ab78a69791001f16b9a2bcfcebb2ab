@@ -212,14 +212,10 @@ CREATE TABLE order_product (
 	orderid integer NOT NULL,
 	productid integer NOT NULL,
 	quatity integer NOT NULL,
-	unit_value float NOT NULL,
+	unit_value numeric(10, 2) NOT NULL,
 	
-	CONSTRAINT pk_ordProd_orderid_productid PRIMARY KEY (orderid, productid),
-	CONSTRAINT fk_ordProd_orderid FOREIGN KEY (orderid) REFERENCES orders (orderid),
-	CONSTRAINT fk_ordProd_productid FOREIGN KEY (productid) REFERENCES product (productid)
-);
-
-DROP TABLE order_product;
+	
+)
 
 
 

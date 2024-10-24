@@ -4609,3 +4609,187 @@ Caused by: org.postgresql.util.PSQLException: ERROR: type "data" does not exist
 	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:332)
 	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:131)
 	... 12 more
+2024-10-23 20:31:27.496 - Error while analyzing query text: CREATE TABLE order_product (
+	orderid integer NOT NULL,
+	productid integer NOT NULL,
+	quatity integer NOT NULL,
+	unit_value numeric(10, 2) NOT NULL,
+	
+	CONSTRAINT pk_ordProd_orderid PRIMARY KEY (orderid),
+	CONSTRAINT fk_ordProd_orderid FOREIGN KEY ()
+)
+java.lang.NullPointerException: Cannot invoke "org.jkiss.dbeaver.model.sql.semantics.SQLQuerySymbolEntry.isNotClassified()" because "columnRef" is null
+	at org.jkiss.dbeaver.model.sql.semantics.model.ddl.SQLQueryTableConstraintSpec.propagateContext(SQLQueryTableConstraintSpec.java:98)
+	at org.jkiss.dbeaver.model.sql.semantics.model.ddl.SQLQueryTableCreateModel.applyContext(SQLQueryTableCreateModel.java:121)
+	at org.jkiss.dbeaver.model.sql.semantics.model.SQLQueryModel.propagateContext(SQLQueryModel.java:80)
+	at org.jkiss.dbeaver.model.sql.semantics.SQLQueryModelRecognizer.recognizeQuery(SQLQueryModelRecognizer.java:156)
+	at org.jkiss.dbeaver.model.sql.semantics.SQLQueryModelRecognizer.recognizeQuery(SQLQueryModelRecognizer.java:934)
+	at org.jkiss.dbeaver.ui.editors.sql.semantics.SQLBackgroundParsingJob.doWork(SQLBackgroundParsingJob.java:588)
+	at org.jkiss.dbeaver.ui.editors.sql.semantics.SQLBackgroundParsingJob$1.run(SQLBackgroundParsingJob.java:97)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2024-10-23 20:35:52.761 - Error while analyzing query text: CREATE TABLE order_product (
+	orderid integer NOT NULL,
+	productid integer NOT NULL,
+	quatity integer NOT NULL,
+	unit_value numeric(10, 2) NOT NULL,
+	
+	CONSTRAINT pk_ordProd_orderid PRIMARY KEY (orderid),
+	CONSTRAINT fk_ordProd_orderid FOREIGN KEY (orderid) REFERENCES orders (orderid),
+	CONSTRAINT pk_ordProd_productid PRIMARY KEY ()
+)
+java.lang.NullPointerException: Cannot invoke "org.jkiss.dbeaver.model.sql.semantics.SQLQuerySymbolEntry.isNotClassified()" because "columnRef" is null
+	at org.jkiss.dbeaver.model.sql.semantics.model.ddl.SQLQueryTableConstraintSpec.propagateContext(SQLQueryTableConstraintSpec.java:98)
+	at org.jkiss.dbeaver.model.sql.semantics.model.ddl.SQLQueryTableCreateModel.applyContext(SQLQueryTableCreateModel.java:121)
+	at org.jkiss.dbeaver.model.sql.semantics.model.SQLQueryModel.propagateContext(SQLQueryModel.java:80)
+	at org.jkiss.dbeaver.model.sql.semantics.SQLQueryModelRecognizer.recognizeQuery(SQLQueryModelRecognizer.java:156)
+	at org.jkiss.dbeaver.model.sql.semantics.SQLQueryModelRecognizer.recognizeQuery(SQLQueryModelRecognizer.java:934)
+	at org.jkiss.dbeaver.ui.editors.sql.semantics.SQLBackgroundParsingJob.doWork(SQLBackgroundParsingJob.java:588)
+	at org.jkiss.dbeaver.ui.editors.sql.semantics.SQLBackgroundParsingJob$1.run(SQLBackgroundParsingJob.java:97)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2024-10-23 20:36:22.417 - Error while analyzing query text: CREATE TABLE order_product (
+	orderid integer NOT NULL,
+	productid integer NOT NULL,
+	quatity integer NOT NULL,
+	unit_value numeric(10, 2) NOT NULL,
+	
+	CONSTRAINT pk_ordProd_orderid PRIMARY KEY (orderid),
+	CONSTRAINT fk_ordProd_orderid FOREIGN KEY (orderid) REFERENCES orders (orderid),
+	CONSTRAINT pk_ordProd_productid PRIMARY KEY (productid),
+	CONSTRAINT fk_ordProd_productid FOREIGN KEY ()
+)
+java.lang.NullPointerException: Cannot invoke "org.jkiss.dbeaver.model.sql.semantics.SQLQuerySymbolEntry.isNotClassified()" because "columnRef" is null
+	at org.jkiss.dbeaver.model.sql.semantics.model.ddl.SQLQueryTableConstraintSpec.propagateContext(SQLQueryTableConstraintSpec.java:98)
+	at org.jkiss.dbeaver.model.sql.semantics.model.ddl.SQLQueryTableCreateModel.applyContext(SQLQueryTableCreateModel.java:121)
+	at org.jkiss.dbeaver.model.sql.semantics.model.SQLQueryModel.propagateContext(SQLQueryModel.java:80)
+	at org.jkiss.dbeaver.model.sql.semantics.SQLQueryModelRecognizer.recognizeQuery(SQLQueryModelRecognizer.java:156)
+	at org.jkiss.dbeaver.model.sql.semantics.SQLQueryModelRecognizer.recognizeQuery(SQLQueryModelRecognizer.java:934)
+	at org.jkiss.dbeaver.ui.editors.sql.semantics.SQLBackgroundParsingJob.doWork(SQLBackgroundParsingJob.java:588)
+	at org.jkiss.dbeaver.ui.editors.sql.semantics.SQLBackgroundParsingJob$1.run(SQLBackgroundParsingJob.java:97)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2024-10-23 20:36:44.124 - SQL Error [42P16]: ERROR: multiple primary keys for table "order_product" are not allowed
+  Position: 290
+org.jkiss.dbeaver.model.sql.DBSQLException: SQL Error [42P16]: ERROR: multiple primary keys for table "order_product" are not allowed
+  Position: 290
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:133)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:631)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:522)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:541)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1001)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4238)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.postgresql.util.PSQLException: ERROR: multiple primary keys for table "order_product" are not allowed
+  Position: 290
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:297)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:332)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:131)
+	... 12 more
+2024-10-23 20:41:51.370 - Error while analyzing query text: CREATE TABLE order_product (
+	orderid integer NOT NULL,
+	productid integer NOT NULL,
+	quatity integer NOT NULL,
+	unit_value numeric(10, 2) NOT NULL,
+	
+	CONSTRAINT pk_ordProd_orderid_productid PRIMARY KEY (orderid, ),
+	CONSTRAINT fk_ordProd_orderid FOREIGN KEY (orderid) REFERENCES orders (orderid),
+	CONSTRAINT pk_ordProd_productid PRIMARY KEY (productid),
+	CONSTRAINT fk_ordProd_productid FOREIGN KEY (productid) REFERENCES product (productid)
+)
+java.lang.NullPointerException: Cannot invoke "org.jkiss.dbeaver.model.sql.semantics.SQLQuerySymbolEntry.isNotClassified()" because "columnRef" is null
+	at org.jkiss.dbeaver.model.sql.semantics.model.ddl.SQLQueryTableConstraintSpec.propagateContext(SQLQueryTableConstraintSpec.java:98)
+	at org.jkiss.dbeaver.model.sql.semantics.model.ddl.SQLQueryTableCreateModel.applyContext(SQLQueryTableCreateModel.java:121)
+	at org.jkiss.dbeaver.model.sql.semantics.model.SQLQueryModel.propagateContext(SQLQueryModel.java:80)
+	at org.jkiss.dbeaver.model.sql.semantics.SQLQueryModelRecognizer.recognizeQuery(SQLQueryModelRecognizer.java:156)
+	at org.jkiss.dbeaver.model.sql.semantics.SQLQueryModelRecognizer.recognizeQuery(SQLQueryModelRecognizer.java:934)
+	at org.jkiss.dbeaver.ui.editors.sql.semantics.SQLBackgroundParsingJob.doWork(SQLBackgroundParsingJob.java:588)
+	at org.jkiss.dbeaver.ui.editors.sql.semantics.SQLBackgroundParsingJob$1.run(SQLBackgroundParsingJob.java:97)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2024-10-23 20:42:13.911 - Execution context closed (postgres, 72)
+2024-10-23 20:42:13.922 - Execution context closed (postgres, 73)
+2024-10-23 20:42:13.932 - Execution context closed (postgres, 74)
+2024-10-23 20:42:13.943 - Execution context closed (postgres, 75)
+2024-10-23 20:42:13.953 - Execution context closed (postgres, 76)
+2024-10-23 20:42:13.963 - Error testing property synchronizable: No databases found on the server
+2024-10-23 20:42:13.963 - Error testing property synchronizable: No databases found on the server
+2024-10-23 20:42:13.974 - Execution context opened (postgres; Main <postgres>; 77)
+2024-10-23 20:42:13.974 - Initiate connection to PostgreSQL database [postgres@localhost] for Main <postgres>
+2024-10-23 20:42:13.992 - Execution context opened (postgres; Metadata <postgres>; 78)
+2024-10-23 20:42:13.992 - Initiate connection to PostgreSQL database [postgres@localhost] for Metadata <postgres>
+2024-10-23 20:43:14.335 - Execution context opened (postgres; Main <postgres>; 79)
+2024-10-23 20:43:14.335 - Initiate connection to PostgreSQL database [postgres@localhost] for Main <postgres>
+2024-10-23 20:43:14.350 - Execution context opened (postgres; Metadata <postgres>; 80)
+2024-10-23 20:43:14.350 - Initiate connection to PostgreSQL database [postgres@localhost] for Metadata <postgres>
+2024-10-23 20:45:28.234 - Initiate connection to PostgreSQL database [postgres@localhost] for SQLEditor <createTable.sql>
+2024-10-23 20:45:54.283 - Execution context closed (postgres, 77)
+2024-10-23 20:45:54.293 - Execution context closed (postgres, 78)
+2024-10-23 20:45:54.315 - Execution context opened (postgres; Main <postgres>; 81)
+2024-10-23 20:45:54.315 - Initiate connection to PostgreSQL database [postgres@localhost] for Main <postgres>
+2024-10-23 20:45:54.333 - Execution context opened (postgres; Metadata <postgres>; 82)
+2024-10-23 20:45:54.333 - Initiate connection to PostgreSQL database [postgres@localhost] for Metadata <postgres>
+2024-10-23 21:08:18.860 - SQL Error [42P07]: ERROR: relation "order_product" already exists
+org.jkiss.dbeaver.model.sql.DBSQLException: SQL Error [42P07]: ERROR: relation "order_product" already exists
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:133)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:631)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:522)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:541)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1001)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4238)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.postgresql.util.PSQLException: ERROR: relation "order_product" already exists
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:297)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:332)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:131)
+	... 12 more
+2024-10-23 21:08:47.980 - Execution context closed (postgres, 81)
+2024-10-23 21:08:47.991 - Execution context closed (postgres, 82)
+2024-10-23 21:08:48.016 - Execution context opened (postgres; Main <postgres>; 83)
+2024-10-23 21:08:48.016 - Initiate connection to PostgreSQL database [postgres@localhost] for Main <postgres>
+2024-10-23 21:08:48.032 - Execution context opened (postgres; Metadata <postgres>; 84)
+2024-10-23 21:08:48.032 - Initiate connection to PostgreSQL database [postgres@localhost] for Metadata <postgres>
+2024-10-24 18:59:22.309 - Execution context closed (postgres, 83)
+2024-10-24 18:59:22.359 - Execution context closed (postgres, 84)
+2024-10-24 18:59:22.363 - Disconnected (postgres-jdbc-192696dc61e-27e03f1e851589e1)
+2024-10-24 18:59:27.632 - Execution context closed (postgres, 74)
+2024-10-24 19:07:43.746 - Connect with 'postgres' (postgres-jdbc-192696dc61e-27e03f1e851589e1)
+2024-10-24 19:07:43.807 - Execution context opened (postgres; Main <postgres>; 85)
+2024-10-24 19:07:43.808 - Initiate connection to PostgreSQL database [postgres@localhost] for Main <postgres>
+2024-10-24 19:07:43.831 - Execution context opened (postgres; Metadata <postgres>; 86)
+2024-10-24 19:07:43.831 - Initiate connection to PostgreSQL database [postgres@localhost] for Metadata <postgres>
+2024-10-24 19:07:43.868 - Connected (postgres-jdbc-192696dc61e-27e03f1e851589e1, PostgreSQL JDBC Driver [42.7.2])
+2024-10-24 19:07:43.869 - Execution context opened (postgres; SQLEditor <createTable.sql>; 87)
+2024-10-24 19:07:43.869 - Initiate connection to PostgreSQL database [postgres@localhost] for SQLEditor <createTable.sql>
+2024-10-24 19:07:43.961 - Execution context opened (postgres; SQLEditor <Select.sql>; 88)
+2024-10-24 19:07:43.961 - Initiate connection to PostgreSQL database [postgres@localhost] for SQLEditor <Select.sql>
+2024-10-24 19:07:44.002 - Execution context opened (postgres; SQLEditor <Insert-Update-delete-alter.sql>; 89)
+2024-10-24 19:07:44.002 - Initiate connection to PostgreSQL database [postgres@localhost] for SQLEditor <Insert-Update-delete-alter.sql>

@@ -215,7 +215,8 @@ CREATE TABLE order_product (
 	unit_value float NOT NULL,
 	
 	CONSTRAINT pk_ordProd_orderid_productid PRIMARY KEY (orderid, productid),
-	CONSTRAINT fk_ordProd_orderid FOREIGN KEY (orderid) REFERENCES orders (orderid),
+--	CONSTRAINT fk_ordPrx od_orderid FOREIGN KEY (orderid) REFERENCES orders (orderid),
+--	CONSTRAINT pk_ordProd_productid PRIMARY KEY (productid),
 	CONSTRAINT fk_ordProd_productid FOREIGN KEY (productid) REFERENCES product (productid)
 );
 
