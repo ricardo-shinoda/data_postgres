@@ -211,7 +211,7 @@ CREATE TABLE orders (
 CREATE TABLE order_product (
 	orderid integer NOT NULL,
 	productid integer NOT NULL,
-	quantity integer NOT NULL,
+	quatity integer NOT NULL,
 	unit_value float NOT NULL,
 	
 	CONSTRAINT pk_ordProd_orderid_productid PRIMARY KEY (orderid, productid),
@@ -221,7 +221,6 @@ CREATE TABLE order_product (
 
 DROP TABLE order_product;
 
-SELECT * FROM order_product;
 
 
 

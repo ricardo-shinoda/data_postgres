@@ -345,9 +345,14 @@ VALUES
 (14, 4, 2, 9.25),
 (15, 1, 4, 15.50);
 
-ALTER TABLE order_product RENAME COLUMN	quatity TO quantity;
-
 SELECT * FROM order_product op ;
+
+
+
+
+
+
+
 
 
 
