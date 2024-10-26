@@ -345,7 +345,7 @@ VALUES
 (14, 4, 2, 9.25),
 (15, 1, 4, 15.50);
 
-SELECT * FROM order_product op ;
+SELECT * FROM product;
 
 
 

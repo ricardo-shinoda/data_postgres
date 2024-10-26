@@ -17,14 +17,14 @@
 		<column name="Comment" visible="true" order="9" width="100"/>
 	</item>
 	<item id="Suggestion/NodeList/PostgreTableColumn">
-		<column name="Column Name" visible="true" order="0" width="111"/>
-		<column name="#" visible="true" order="1" width="42"/>
-		<column name="Data type" visible="true" order="2" width="97"/>
-		<column name="Identity" visible="true" order="3" width="73"/>
+		<column name="Column Name" visible="true" order="0" width="113"/>
+		<column name="#" visible="true" order="1" width="44"/>
+		<column name="Data type" visible="true" order="2" width="87"/>
+		<column name="Identity" visible="true" order="3" width="75"/>
 		<column name="Collation" visible="false" order="4" width="100"/>
 		<column name="Not Null" visible="false" order="5" width="100"/>
 		<column name="Default" visible="false" order="6" width="100"/>
-		<column name="Comment" visible="true" order="4" width="97"/>
+		<column name="Comment" visible="true" order="4" width="101"/>
 	</item>
 	<item id="projectExplorer">
 		<column name="Name" visible="true" order="0" width="286"/>

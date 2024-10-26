@@ -4793,3 +4793,97 @@ Caused by: org.postgresql.util.PSQLException: ERROR: relation "order_product" al
 2024-10-24 19:07:43.961 - Initiate connection to PostgreSQL database [postgres@localhost] for SQLEditor <Select.sql>
 2024-10-24 19:07:44.002 - Execution context opened (postgres; SQLEditor <Insert-Update-delete-alter.sql>; 89)
 2024-10-24 19:07:44.002 - Initiate connection to PostgreSQL database [postgres@localhost] for SQLEditor <Insert-Update-delete-alter.sql>
+2024-10-25 20:51:15.327 - Execution context closed (postgres, 85)
+2024-10-25 20:51:15.369 - Execution context closed (postgres, 86)
+2024-10-25 20:51:15.380 - Execution context closed (postgres, 87)
+2024-10-25 20:51:15.390 - Execution context closed (postgres, 88)
+2024-10-25 20:51:15.401 - Execution context closed (postgres, 89)
+2024-10-25 20:51:15.402 - Disconnected (postgres-jdbc-192696dc61e-27e03f1e851589e1)
+2024-10-25 20:55:26.633 - Connect with 'postgres' (postgres-jdbc-192696dc61e-27e03f1e851589e1)
+2024-10-25 20:55:26.663 - Execution context opened (postgres; Main <postgres>; 90)
+2024-10-25 20:55:26.663 - Initiate connection to PostgreSQL database [postgres@localhost] for Main <postgres>
+2024-10-25 20:55:26.676 - Execution context opened (postgres; Metadata <postgres>; 91)
+2024-10-25 20:55:26.676 - Initiate connection to PostgreSQL database [postgres@localhost] for Metadata <postgres>
+2024-10-25 20:55:26.702 - Connected (postgres-jdbc-192696dc61e-27e03f1e851589e1, PostgreSQL JDBC Driver [42.7.2])
+2024-10-25 20:55:26.702 - Execution context opened (postgres; SQLEditor <createTable.sql>; 92)
+2024-10-25 20:55:26.702 - Initiate connection to PostgreSQL database [postgres@localhost] for SQLEditor <createTable.sql>
+2024-10-25 20:55:26.714 - Execution context opened (postgres; SQLEditor <Select.sql>; 93)
+2024-10-25 20:55:26.714 - Initiate connection to PostgreSQL database [postgres@localhost] for SQLEditor <Select.sql>
+2024-10-25 20:55:26.714 - Execution context opened (postgres; SQLEditor <Insert-Update-delete-alter.sql>; 94)
+2024-10-25 20:55:26.765 - Initiate connection to PostgreSQL database [postgres@localhost] for SQLEditor <Insert-Update-delete-alter.sql>
+2024-10-25 20:55:39.417 - Error while analyzing query text: INSERT INTO order_product (orderid, )
+java.lang.NullPointerException: Cannot invoke "org.jkiss.dbeaver.model.sql.semantics.SQLQuerySymbolEntry.isNotClassified()" because "columnName" is null
+	at org.jkiss.dbeaver.model.sql.semantics.model.dml.SQLQueryInsertModel.propagateContextImpl(SQLQueryInsertModel.java:94)
+	at org.jkiss.dbeaver.model.sql.semantics.model.dml.SQLQueryDMLStatementModel.applyContext(SQLQueryDMLStatementModel.java:57)
+	at org.jkiss.dbeaver.model.sql.semantics.model.SQLQueryModel.propagateContext(SQLQueryModel.java:80)
+	at org.jkiss.dbeaver.model.sql.semantics.SQLQueryModelRecognizer.recognizeQuery(SQLQueryModelRecognizer.java:156)
+	at org.jkiss.dbeaver.model.sql.semantics.SQLQueryModelRecognizer.recognizeQuery(SQLQueryModelRecognizer.java:934)
+	at org.jkiss.dbeaver.ui.editors.sql.semantics.SQLBackgroundParsingJob.doWork(SQLBackgroundParsingJob.java:588)
+	at org.jkiss.dbeaver.ui.editors.sql.semantics.SQLBackgroundParsingJob$1.run(SQLBackgroundParsingJob.java:97)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2024-10-25 20:55:43.021 - Error while analyzing query text: INSERT INTO order_product (orderid, productit, )
+java.lang.NullPointerException: Cannot invoke "org.jkiss.dbeaver.model.sql.semantics.SQLQuerySymbolEntry.isNotClassified()" because "columnName" is null
+	at org.jkiss.dbeaver.model.sql.semantics.model.dml.SQLQueryInsertModel.propagateContextImpl(SQLQueryInsertModel.java:94)
+	at org.jkiss.dbeaver.model.sql.semantics.model.dml.SQLQueryDMLStatementModel.applyContext(SQLQueryDMLStatementModel.java:57)
+	at org.jkiss.dbeaver.model.sql.semantics.model.SQLQueryModel.propagateContext(SQLQueryModel.java:80)
+	at org.jkiss.dbeaver.model.sql.semantics.SQLQueryModelRecognizer.recognizeQuery(SQLQueryModelRecognizer.java:156)
+	at org.jkiss.dbeaver.model.sql.semantics.SQLQueryModelRecognizer.recognizeQuery(SQLQueryModelRecognizer.java:934)
+	at org.jkiss.dbeaver.ui.editors.sql.semantics.SQLBackgroundParsingJob.doWork(SQLBackgroundParsingJob.java:588)
+	at org.jkiss.dbeaver.ui.editors.sql.semantics.SQLBackgroundParsingJob$1.run(SQLBackgroundParsingJob.java:97)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2024-10-25 20:55:45.453 - Error while analyzing query text: INSERT INTO order_product (orderid, productid, )
+java.lang.NullPointerException: Cannot invoke "org.jkiss.dbeaver.model.sql.semantics.SQLQuerySymbolEntry.isNotClassified()" because "columnName" is null
+	at org.jkiss.dbeaver.model.sql.semantics.model.dml.SQLQueryInsertModel.propagateContextImpl(SQLQueryInsertModel.java:94)
+	at org.jkiss.dbeaver.model.sql.semantics.model.dml.SQLQueryDMLStatementModel.applyContext(SQLQueryDMLStatementModel.java:57)
+	at org.jkiss.dbeaver.model.sql.semantics.model.SQLQueryModel.propagateContext(SQLQueryModel.java:80)
+	at org.jkiss.dbeaver.model.sql.semantics.SQLQueryModelRecognizer.recognizeQuery(SQLQueryModelRecognizer.java:156)
+	at org.jkiss.dbeaver.model.sql.semantics.SQLQueryModelRecognizer.recognizeQuery(SQLQueryModelRecognizer.java:934)
+	at org.jkiss.dbeaver.ui.editors.sql.semantics.SQLBackgroundParsingJob.doWork(SQLBackgroundParsingJob.java:588)
+	at org.jkiss.dbeaver.ui.editors.sql.semantics.SQLBackgroundParsingJob$1.run(SQLBackgroundParsingJob.java:97)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2024-10-25 20:55:48.517 - Error while analyzing query text: INSERT INTO order_product (orderid, productid, quatity, )
+java.lang.NullPointerException: Cannot invoke "org.jkiss.dbeaver.model.sql.semantics.SQLQuerySymbolEntry.isNotClassified()" because "columnName" is null
+	at org.jkiss.dbeaver.model.sql.semantics.model.dml.SQLQueryInsertModel.propagateContextImpl(SQLQueryInsertModel.java:94)
+	at org.jkiss.dbeaver.model.sql.semantics.model.dml.SQLQueryDMLStatementModel.applyContext(SQLQueryDMLStatementModel.java:57)
+	at org.jkiss.dbeaver.model.sql.semantics.model.SQLQueryModel.propagateContext(SQLQueryModel.java:80)
+	at org.jkiss.dbeaver.model.sql.semantics.SQLQueryModelRecognizer.recognizeQuery(SQLQueryModelRecognizer.java:156)
+	at org.jkiss.dbeaver.model.sql.semantics.SQLQueryModelRecognizer.recognizeQuery(SQLQueryModelRecognizer.java:934)
+	at org.jkiss.dbeaver.ui.editors.sql.semantics.SQLBackgroundParsingJob.doWork(SQLBackgroundParsingJob.java:588)
+	at org.jkiss.dbeaver.ui.editors.sql.semantics.SQLBackgroundParsingJob$1.run(SQLBackgroundParsingJob.java:97)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2024-10-25 20:58:19.597 - SQL Error [42703]: ERROR: column "quantity" of relation "order_product" does not exist
+  Position: 48
+
+Error position: line: 330 pos: 47
+org.jkiss.dbeaver.model.sql.DBSQLException: SQL Error [42703]: ERROR: column "quantity" of relation "order_product" does not exist
+  Position: 48
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:133)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:631)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:522)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:544)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1001)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4238)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.postgresql.util.PSQLException: ERROR: column "quantity" of relation "order_product" does not exist
+  Position: 48
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:297)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:332)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:131)
+	... 11 more
