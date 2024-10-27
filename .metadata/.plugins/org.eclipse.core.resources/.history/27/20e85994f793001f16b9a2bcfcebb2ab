@@ -57,13 +57,8 @@ SELECT * FROM orders o ;
 
 SELECT * FROM carrier c ;
 
-SELECT * FROM orders o 
-WHERE carrierid = 2;
-
---Orders placed by salesperson Maria (5) or by salesperson Aline (7) .
-
-SELECT * FROM seller s ;
-
+--Orders placed by salesperson Maria or by salesperson Aline.
+--
 --Clients who live in União da Vitória or Porto União.
 --
 --Clients who do not live in União da Vitória or Porto União.

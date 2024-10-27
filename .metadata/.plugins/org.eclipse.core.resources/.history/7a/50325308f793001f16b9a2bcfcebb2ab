@@ -51,19 +51,13 @@ SELECT * FROM orders o
 WHERE clientid = 5 AND o.sellerid = 3
 ORDER BY value;
 
+
 SELECT * FROM orders o ;
 
---Orders that were transported by the carrier União Transportes(2).
-
-SELECT * FROM carrier c ;
-
-SELECT * FROM orders o 
-WHERE carrierid = 2;
-
---Orders placed by salesperson Maria (5) or by salesperson Aline (7) .
-
-SELECT * FROM seller s ;
-
+--Orders that were transported by the carrier União Transportes.
+--
+--Orders placed by salesperson Maria or by salesperson Aline.
+--
 --Clients who live in União da Vitória or Porto União.
 --
 --Clients who do not live in União da Vitória or Porto União.

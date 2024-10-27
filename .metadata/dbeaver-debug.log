@@ -5132,3 +5132,55 @@ Caused by: org.postgresql.util.PSQLException: ERROR: date/time field value out o
 2024-10-26 20:32:22.430 - Execution context closed (postgres, 94)
 2024-10-26 20:32:22.491 - Execution context closed (postgres, 95)
 2024-10-26 20:32:22.495 - Disconnected (postgres-jdbc-192696dc61e-27e03f1e851589e1)
+2024-10-26 20:50:49.600 - Connect with 'postgres' (postgres-jdbc-192696dc61e-27e03f1e851589e1)
+2024-10-26 20:50:49.669 - Execution context opened (postgres; Main <postgres>; 96)
+2024-10-26 20:50:49.669 - Initiate connection to PostgreSQL database [postgres@localhost] for Main <postgres>
+2024-10-26 20:50:49.692 - Execution context opened (postgres; Metadata <postgres>; 97)
+2024-10-26 20:50:49.692 - Initiate connection to PostgreSQL database [postgres@localhost] for Metadata <postgres>
+2024-10-26 20:50:49.736 - Connected (postgres-jdbc-192696dc61e-27e03f1e851589e1, PostgreSQL JDBC Driver [42.7.2])
+2024-10-26 20:50:49.737 - Execution context opened (postgres; SQLEditor <exercise.sql>; 98)
+2024-10-26 20:50:49.737 - Initiate connection to PostgreSQL database [postgres@localhost] for SQLEditor <exercise.sql>
+2024-10-26 20:50:49.740 - Execution context opened (postgres; SQLEditor <Select.sql>; 99)
+2024-10-26 20:50:49.740 - Execution context opened (postgres; SQLEditor <Insert-Update-delete-alter.sql>; 101)
+2024-10-26 20:50:49.740 - Execution context opened (postgres; SQLEditor <createTable.sql>; 100)
+2024-10-26 20:50:49.790 - Initiate connection to PostgreSQL database [postgres@localhost] for SQLEditor <Select.sql>
+2024-10-26 20:50:49.840 - Initiate connection to PostgreSQL database [postgres@localhost] for SQLEditor <createTable.sql>
+2024-10-26 20:50:49.891 - Initiate connection to PostgreSQL database [postgres@localhost] for SQLEditor <Insert-Update-delete-alter.sql>
+2024-10-26 20:50:50.196 - SQL Error [42P01]: ERROR: relation "clients" does not exist
+  Position: 16
+org.jkiss.dbeaver.model.sql.DBSQLException: SQL Error [42P01]: ERROR: relation "clients" does not exist
+  Position: 16
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:133)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:631)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:522)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:541)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1001)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4238)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.postgresql.util.PSQLException: ERROR: relation "clients" does not exist
+  Position: 16
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:297)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:332)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:131)
+	... 12 more
+2024-10-27 19:48:23.349 - Execution context closed (postgres, 96)
+2024-10-27 19:48:23.444 - Execution context closed (postgres, 97)
+2024-10-27 19:48:23.463 - Execution context closed (postgres, 98)
+2024-10-27 19:48:23.474 - Execution context closed (postgres, 99)
+2024-10-27 19:48:23.569 - Execution context closed (postgres, 100)
+2024-10-27 19:48:23.580 - Execution context closed (postgres, 101)
+2024-10-27 19:48:23.581 - Disconnected (postgres-jdbc-192696dc61e-27e03f1e851589e1)
