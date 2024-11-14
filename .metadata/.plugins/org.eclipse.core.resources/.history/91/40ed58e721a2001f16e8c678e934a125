@@ -69,17 +69,8 @@ WHERE sellerid = 5 OR sellerid = 7;
 
 --Clients who live in Bauru (21) or Fortaleza (17).
 
-WHERE cityid = 5 OR cityid = 20;
-
-
-
-
 SELECT * FROM client
-
-
-
-
-SELECT * FROM client;
+WHERE cityid = 21 AND cityif - 17;
 
 --Clients who do not live in União da Vitória or Porto União.
 --

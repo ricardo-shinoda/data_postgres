@@ -69,14 +69,8 @@ WHERE sellerid = 5 OR sellerid = 7;
 
 --Clients who live in Bauru (21) or Fortaleza (17).
 
-WHERE cityid = 5 OR cityid = 20;
-
-
-
-
 SELECT * FROM client
-
-
+WHERE cityid = 5 OR cityid = 20;
 
 
 SELECT * FROM client;

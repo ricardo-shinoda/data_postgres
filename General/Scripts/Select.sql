@@ -90,3 +90,18 @@ SELECT 'NAME: ' || name, 'Rua: ' || street, 'Numero: ' || house_number, 'Complem
 SELECT * FROM client ORDER BY clientid;
 
 UPDATE client SET name = 'Lucas Xinoda' WHERE clientid = 1;
+
+SELECT nacionality FROM client;
+
+SELECT * FROM client;
+
+SELECT DISTINCT state FROM client;
+
+SELECT * FROM city;
+
+
+
+
+
+
+
