@@ -123,11 +123,5 @@ WHERE street_name IS NOT NULL ;
 
 
 --Items from order 01.
-
-SELECT * FROM orders
-WHERE orderid = 1;
-
+--
 --Items from order 06 or order 10.
-
-SELECT * FROM orders o
-WHERE orderid IN (6, 10);

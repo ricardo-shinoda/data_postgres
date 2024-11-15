@@ -104,30 +104,12 @@ WHERE name LIKE '%a';
 
 --Salespeople whose names do not start with the letter A.
 
-SELECT * FROM seller s 
-WHERE name NOT LIKE 'A%';
 
---Municipalities that start with the letter S and are in Sao Paulo.
 
-SELECT * FROM city c;
-
-SELECT * FROM city c 
-WHERE name LIKE 'S%' AND stateid = 2;
-
+--Municipalities that start with the letter P and are in Santa Catarina.
+--
 --Carriers that provided an address.
-
-SELECT * FROM carrier c ;
-
-SELECT * FROM carrier c 
-WHERE street_name IS NOT NULL ;
-
-
+--
 --Items from order 01.
-
-SELECT * FROM orders
-WHERE orderid = 1;
-
+--
 --Items from order 06 or order 10.
-
-SELECT * FROM orders o
-WHERE orderid IN (6, 10);
