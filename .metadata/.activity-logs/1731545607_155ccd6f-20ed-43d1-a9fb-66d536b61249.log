@@ -4,3 +4,4 @@
 4372:GENERAL_VIEW_OPEN:view=org.jkiss.dbeaver.core.projectExplorer
 4805:Open connection:driver=postgresql:postgres-jdbc
 4909:SQL_EDITOR_OPEN:driver=postgresql:postgres-jdbc
+87463445:Open connection:driver=postgresql:postgres-jdbc
