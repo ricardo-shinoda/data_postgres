@@ -160,3 +160,10 @@ Caused by: org.postgresql.util.PSQLException: ERROR: column "valor" does not exi
 2024-11-17 21:44:35.562 - Text parser rule inconsistency: rule failed and the scanned should have been fallbacked, but the current offset is different after attempt to evaluate org.jkiss.dbeaver.model.sql.parser.rules.SQLDollarQuoteRule@767b61a1
 2024-11-17 21:44:35.563 - Text parser rule inconsistency: rule failed and the scanned should have been fallbacked, but the current offset is different after attempt to evaluate org.jkiss.dbeaver.model.sql.parser.rules.NestedMultiLineRule@10fbb02f
 2024-11-17 21:44:35.563 - Text parser rule inconsistency: rule failed and the scanned should have been fallbacked, but the current offset is different after attempt to evaluate org.jkiss.dbeaver.model.text.parser.rules.NumberRule@14419666
+2024-11-17 22:23:56.087 - Execution context closed (postgres, 6)
+2024-11-17 22:23:56.194 - Execution context closed (postgres, 5)
+2024-11-17 22:23:56.453 - Dispose navigator model
+2024-11-17 22:23:56.518 - DBeaver is stopping
+2024-11-17 22:23:56.521 - Stop instance server
+2024-11-17 22:23:57.523 - Instance server has been stopped
+2024-11-17 22:23:57.523 - DBeaver shutdown completed
