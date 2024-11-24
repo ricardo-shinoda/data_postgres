@@ -1,13 +1,12 @@
-2024-11-15 10:24:38.016 - DBeaver 24.2.4.202411031831 is starting
-2024-11-15 10:24:38.016 - OS: Linux 6.9.3-76060903-generic (amd64)
-2024-11-15 10:24:38.017 - Java version: 17.0.6 by Eclipse Adoptium (64bit)
-2024-11-15 10:24:38.017 - Install path: '/usr/share/dbeaver-ce'
-2024-11-15 10:24:38.018 - Instance path: 'file:/home/ricardo/code/data_postgres/'
-2024-11-15 10:24:38.023 - Memory available 64Mb/1024Mb
-2024-11-15 10:24:38.033 - Create display
-2024-11-15 10:24:38.367 - Error accessing instance server: java.net.ConnectException
-2024-11-15 10:24:38.385 - Starting instance server at http://localhost:37645
-2024-11-15 10:24:38.395 - Run workbench
+2024-11-23 21:14:34.817 - DBeaver 24.2.4.202411031831 is starting
+2024-11-23 21:14:34.818 - OS: Linux 6.9.3-76060903-generic (amd64)
+2024-11-23 21:14:34.818 - Java version: 17.0.6 by Eclipse Adoptium (64bit)
+2024-11-23 21:14:34.819 - Install path: '/usr/share/dbeaver-ce'
+2024-11-23 21:14:34.819 - Instance path: 'file:/home/ricardo/code/data_postgres/'
+2024-11-23 21:14:34.822 - Memory available 64Mb/1024Mb
+2024-11-23 21:14:34.837 - Create display
+2024-11-23 21:14:35.042 - Starting instance server at http://localhost:33297
+2024-11-23 21:14:35.055 - Run workbench
 > Start Eclipse e4 Workbench SWT [org.eclipse.e4.ui.workbench.swt 0.17.500.v20240807-0911]
 > Start Eclipse Application Services [org.eclipse.e4.core.services 2.4.400.v20240413-1529]
 > Start Eclipse UI Application Services [org.eclipse.e4.ui.services 1.6.300.v20231201-1637]
@@ -22,22 +21,20 @@
 > Start Eclipse CSS SWT Support [org.eclipse.e4.ui.css.swt 0.15.400.v20240321-1245]
 > Start Default Text Editor [org.eclipse.ui.editors 3.18.0.v20240807-0735]
 > Start Text Editor Framework [org.eclipse.ui.workbench.texteditor 3.18.0.v20240819-1419]
-2024-11-15 10:24:40.434 - Configure workbench window
+2024-11-23 21:14:38.152 - Configure workbench window
 > Start DBeaver SQL Model [org.jkiss.dbeaver.model.sql 1.0.132.202411031831]
-2024-11-15 10:24:40.653 - Total database drivers: 119 (119)
+2024-11-23 21:14:38.494 - Total database drivers: 119 (119)
 > Start Help System Core [org.eclipse.help 3.10.400.v20240415-0528]
-2024-11-15 10:24:40.845 - Create actions
-2024-11-15 10:24:40.859 - Disable Eclipse action set 'org.eclipse.ui.edit.text.actionSet.annotationNavigation'
-2024-11-15 10:24:40.860 - Disable Eclipse action set 'org.eclipse.ui.WorkingSetActionSet'
-2024-11-15 10:24:40.860 - Disable Eclipse action set 'org.eclipse.ui.actionSet.openFiles'
-2024-11-15 10:24:40.861 - Create workbench actions
-2024-11-15 10:24:41.012 - Open [https://stats.dbeaver.com/send-statistics?session=155ccd6f-20ed-43d1-a9fb-66d536b61249&time=1731545607]
-2024-11-15 10:24:41.437 - Initialize workbench window
-2024-11-15 10:24:41.445 - Finish initialization
+2024-11-23 21:14:38.652 - Create actions
+2024-11-23 21:14:38.668 - Disable Eclipse action set 'org.eclipse.ui.edit.text.actionSet.annotationNavigation'
+2024-11-23 21:14:38.669 - Disable Eclipse action set 'org.eclipse.ui.WorkingSetActionSet'
+2024-11-23 21:14:38.669 - Disable Eclipse action set 'org.eclipse.ui.actionSet.openFiles'
+2024-11-23 21:14:38.670 - Create workbench actions
+2024-11-23 21:14:39.561 - Initialize workbench window
+2024-11-23 21:14:39.571 - Finish initialization
 > Start DBeaver UI Editors - Data [org.jkiss.dbeaver.ui.editors.data 1.0.142.202411031831]
 > Start DBeaver UI Editors - SQL [org.jkiss.dbeaver.ui.editors.sql 1.0.142.202411031831]
 > Start DBeaver SQL Terminal [org.jkiss.dbeaver.ui.editors.sql.terminal 1.0.118.202411031831]
-2024-11-15 10:24:42.303 - Statistics sent (OK)
 > Start Core Compare Support [org.eclipse.compare.core 3.8.500.v20240524-2010]
 > Start Internet Connection Management UI [org.eclipse.ui.net 1.5.400.v20240413-1529]
 > Start Internet Connection Management [org.eclipse.core.net 1.5.500.v20240625-1706]
@@ -51,37 +48,25 @@
 > Start DBeaver UI Editors - Connections [org.jkiss.dbeaver.ui.editors.connection 1.0.133.202411031831]
 > Start Console [org.eclipse.ui.console 3.14.100.v20240429-1358]
 > Start Debug Core [org.eclipse.debug.core 3.21.500.v20240801-2219]
-> Start DBeaver JDBC Model [org.jkiss.dbeaver.model.jdbc 1.0.35.202411031831]
-> Start DBeaver PostgreSQL Model [org.jkiss.dbeaver.ext.postgresql 2.1.215.202411031831]
-> Start DBeaver SQL Language Semantic Model [org.jkiss.dbeaver.model.lsm 1.0.37.202411031831]
 > Start DBeaver Tasks - Native Tools UI [org.jkiss.dbeaver.tasks.native.ui 1.0.120.202411031831]
 > Start DBeaver PostgreSQL UI [org.jkiss.dbeaver.ext.postgresql.ui 1.0.118.202411031831]
 > Start DBeaver Tasks - General UI [org.jkiss.dbeaver.tasks.ui 1.0.120.202411031831]
-2024-11-15 10:24:45.403 - Connect with 'postgres' (postgres-jdbc-192696dc61e-27e03f1e851589e1)
+2024-11-23 21:14:45.183 - Open [https://dbeaver.io/product/version.xml]
+2024-11-23 21:14:45.342 - Connect with 'postgres' (postgres-jdbc-192696dc61e-27e03f1e851589e1)
+> Start DBeaver JDBC Model [org.jkiss.dbeaver.model.jdbc 1.0.35.202411031831]
+> Start DBeaver PostgreSQL Model [org.jkiss.dbeaver.ext.postgresql 2.1.215.202411031831]
 > Start DBeaver GIS Support [org.jkiss.dbeaver.data.gis 1.0.166.202411031831]
-2024-11-15 10:24:45.853 - Execution context opened (postgres; Main <postgres>; 0)
-2024-11-15 10:24:45.854 - Initiate connection to PostgreSQL database [postgres@localhost] for Main <postgres>
-2024-11-15 10:24:45.928 - Execution context opened (postgres; Metadata <postgres>; 1)
-2024-11-15 10:24:45.929 - Initiate connection to PostgreSQL database [postgres@localhost] for Metadata <postgres>
-2024-11-15 10:24:46.038 - Connected (postgres-jdbc-192696dc61e-27e03f1e851589e1, PostgreSQL JDBC Driver [42.7.2])
-2024-11-15 10:24:46.066 - Execution context opened (postgres; SQLEditor <exercise.sql>; 2)
-2024-11-15 10:24:46.067 - Initiate connection to PostgreSQL database [postgres@localhost] for SQLEditor <exercise.sql>
-2024-11-15 10:24:46.215 - Open [https://dbeaver.io/product/version.xml]
-2024-11-15 20:53:52.176 - Execution context closed (postgres, 0)
-2024-11-15 20:53:52.211 - Execution context closed (postgres, 1)
-2024-11-15 20:53:52.222 - Execution context closed (postgres, 2)
-2024-11-15 20:53:52.222 - Disconnected (postgres-jdbc-192696dc61e-27e03f1e851589e1)
-2024-11-17 21:35:50.081 - Connect with 'postgres' (postgres-jdbc-192696dc61e-27e03f1e851589e1)
-2024-11-17 21:35:50.116 - Execution context opened (postgres; Main <postgres>; 3)
-2024-11-17 21:35:50.116 - Initiate connection to PostgreSQL database [postgres@localhost] for Main <postgres>
-2024-11-17 21:35:50.135 - Execution context opened (postgres; Metadata <postgres>; 4)
-2024-11-17 21:35:50.136 - Initiate connection to PostgreSQL database [postgres@localhost] for Metadata <postgres>
-2024-11-17 21:35:50.181 - Connected (postgres-jdbc-192696dc61e-27e03f1e851589e1, PostgreSQL JDBC Driver [42.7.2])
-2024-11-17 21:35:50.181 - Execution context opened (postgres; SQLEditor <exercise.sql>; 5)
-2024-11-17 21:35:50.182 - Initiate connection to PostgreSQL database [postgres@localhost] for SQLEditor <exercise.sql>
-2024-11-17 21:38:55.222 - Execution context opened (postgres; SQLEditor <Script.sql>; 6)
-2024-11-17 21:38:55.222 - Initiate connection to PostgreSQL database [postgres@localhost] for SQLEditor <Script.sql>
-2024-11-17 21:39:18.255 - SWT resource leak detected
+2024-11-23 21:14:46.155 - Execution context opened (postgres; Main <postgres>; 0)
+2024-11-23 21:14:46.155 - Initiate connection to PostgreSQL database [postgres@localhost] for Main <postgres>
+2024-11-23 21:14:46.254 - Execution context opened (postgres; Metadata <postgres>; 1)
+2024-11-23 21:14:46.254 - Initiate connection to PostgreSQL database [postgres@localhost] for Metadata <postgres>
+2024-11-23 21:14:46.407 - Connected (postgres-jdbc-192696dc61e-27e03f1e851589e1, PostgreSQL JDBC Driver [42.7.2])
+2024-11-23 21:14:47.109 - Execution context opened (postgres; SQLEditor <exercise.sql>; 2)
+2024-11-23 21:14:47.114 - Initiate connection to PostgreSQL database [postgres@localhost] for SQLEditor <exercise.sql>
+> Start DBeaver SQL Language Semantic Model [org.jkiss.dbeaver.model.lsm 1.0.37.202411031831]
+2024-11-23 21:23:00.326 - Execution context opened (postgres; SQLEditor <createTable.sql>; 3)
+2024-11-23 21:23:00.327 - Initiate connection to PostgreSQL database [postgres@localhost] for SQLEditor <createTable.sql>
+2024-11-23 21:23:13.531 - SWT resource leak detected
 java.lang.Error: SWT Resource was not properly disposed
 	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
 	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
@@ -121,14 +106,12 @@ java.lang.Error: SWT Resource was not properly disposed
 	at org.jkiss.dbeaver.launcher.DBeaverLauncher.basicRun(DBeaverLauncher.java:610)
 	at org.jkiss.dbeaver.launcher.DBeaverLauncher.run(DBeaverLauncher.java:1461)
 	at org.jkiss.dbeaver.launcher.DBeaverLauncher.main(DBeaverLauncher.java:1434)
-2024-11-17 21:40:22.901 - SQL Error [42703]: ERROR: column "valor" does not exist
-  Hint: Perhaps you meant to reference the column "orders.value".
-  Position: 12
-
-Error position: line: 1 pos: 11
-org.jkiss.dbeaver.model.sql.DBSQLException: SQL Error [42703]: ERROR: column "valor" does not exist
-  Hint: Perhaps you meant to reference the column "orders.value".
-  Position: 12
+2024-11-23 21:26:16.037 - SQL Error [2BP01]: ERROR: cannot drop table client because other objects depend on it
+  Detail: constraint fk_ord_clientid on table orders depends on table client
+  Hint: Use DROP ... CASCADE to drop the dependent objects too.
+org.jkiss.dbeaver.model.sql.DBSQLException: SQL Error [2BP01]: ERROR: cannot drop table client because other objects depend on it
+  Detail: constraint fk_ord_clientid on table orders depends on table client
+  Hint: Use DROP ... CASCADE to drop the dependent objects too.
 	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:130)
 	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:631)
 	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:522)
@@ -142,9 +125,9 @@ org.jkiss.dbeaver.model.sql.DBSQLException: SQL Error [42703]: ERROR: column "va
 	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
 	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-Caused by: org.postgresql.util.PSQLException: ERROR: column "valor" does not exist
-  Hint: Perhaps you meant to reference the column "orders.value".
-  Position: 12
+Caused by: org.postgresql.util.PSQLException: ERROR: cannot drop table client because other objects depend on it
+  Detail: constraint fk_ord_clientid on table orders depends on table client
+  Hint: Use DROP ... CASCADE to drop the dependent objects too.
 	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
 	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
@@ -157,13 +140,223 @@ Caused by: org.postgresql.util.PSQLException: ERROR: column "valor" does not exi
 	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:335)
 	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:128)
 	... 12 more
-2024-11-17 21:44:35.562 - Text parser rule inconsistency: rule failed and the scanned should have been fallbacked, but the current offset is different after attempt to evaluate org.jkiss.dbeaver.model.sql.parser.rules.SQLDollarQuoteRule@767b61a1
-2024-11-17 21:44:35.563 - Text parser rule inconsistency: rule failed and the scanned should have been fallbacked, but the current offset is different after attempt to evaluate org.jkiss.dbeaver.model.sql.parser.rules.NestedMultiLineRule@10fbb02f
-2024-11-17 21:44:35.563 - Text parser rule inconsistency: rule failed and the scanned should have been fallbacked, but the current offset is different after attempt to evaluate org.jkiss.dbeaver.model.text.parser.rules.NumberRule@14419666
-2024-11-17 22:23:56.087 - Execution context closed (postgres, 6)
-2024-11-17 22:23:56.194 - Execution context closed (postgres, 5)
-2024-11-17 22:23:56.453 - Dispose navigator model
-2024-11-17 22:23:56.518 - DBeaver is stopping
-2024-11-17 22:23:56.521 - Stop instance server
-2024-11-17 22:23:57.523 - Instance server has been stopped
-2024-11-17 22:23:57.523 - DBeaver shutdown completed
+2024-11-23 21:26:39.524 - SQL Error [2BP01]: ERROR: cannot drop table city because other objects depend on it
+  Detail: constraint fk_cln_cityid on table client depends on table city
+constraint fk_car_cityid on table carrier depends on table city
+  Hint: Use DROP ... CASCADE to drop the dependent objects too.
+
+Error position:
+org.jkiss.dbeaver.model.sql.DBSQLException: SQL Error [2BP01]: ERROR: cannot drop table city because other objects depend on it
+  Detail: constraint fk_cln_cityid on table client depends on table city
+constraint fk_car_cityid on table carrier depends on table city
+  Hint: Use DROP ... CASCADE to drop the dependent objects too.
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:130)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:631)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:522)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:541)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1001)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4237)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.postgresql.util.PSQLException: ERROR: cannot drop table city because other objects depend on it
+  Detail: constraint fk_cln_cityid on table client depends on table city
+constraint fk_car_cityid on table carrier depends on table city
+  Hint: Use DROP ... CASCADE to drop the dependent objects too.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:297)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:335)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:128)
+	... 12 more
+2024-11-23 21:27:00.494 - SQL Error [42601]: ERROR: syntax error at or near "CASCADE"
+  Position: 6
+
+Error position: line: 21 pos: 5
+org.jkiss.dbeaver.model.sql.DBSQLException: SQL Error [42601]: ERROR: syntax error at or near "CASCADE"
+  Position: 6
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:130)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:631)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:522)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:541)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1001)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4237)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.postgresql.util.PSQLException: ERROR: syntax error at or near "CASCADE"
+  Position: 6
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:297)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:335)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:128)
+	... 12 more
+2024-11-23 21:27:05.510 - SQL Error [42601]: ERROR: syntax error at or near "CASCADE"
+  Position: 7
+org.jkiss.dbeaver.model.sql.DBSQLException: SQL Error [42601]: ERROR: syntax error at or near "CASCADE"
+  Position: 7
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:130)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:631)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:522)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:541)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1001)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4237)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.postgresql.util.PSQLException: ERROR: syntax error at or near "CASCADE"
+  Position: 7
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:297)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:335)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:128)
+	... 12 more
+2024-11-23 21:27:35.181 - org/jkiss/dbeaver/tools/transfer/IDataTransferConsumer
+org.jkiss.dbeaver.DBDatabaseException: org/jkiss/dbeaver/tools/transfer/IDataTransferConsumer
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:253)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.NoClassDefFoundError: org/jkiss/dbeaver/tools/transfer/IDataTransferConsumer
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.showExecutionResult(SQLQueryJob.java:773)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1014)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4237)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	... 4 more
+Caused by: java.lang.ClassNotFoundException: org.jkiss.dbeaver.tools.transfer.IDataTransferConsumer cannot be found by org.jkiss.dbeaver.ui.editors.sql_1.0.142.202411031831
+	at org.eclipse.osgi.internal.loader.BundleLoader.generateException(BundleLoader.java:562)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass0(BundleLoader.java:557)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:434)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:174)
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+	... 9 more
+2024-11-23 21:27:50.193 - org/jkiss/dbeaver/tools/transfer/IDataTransferConsumer
+org.jkiss.dbeaver.DBDatabaseException: org/jkiss/dbeaver/tools/transfer/IDataTransferConsumer
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:253)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.NoClassDefFoundError: org/jkiss/dbeaver/tools/transfer/IDataTransferConsumer
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.showExecutionResult(SQLQueryJob.java:773)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1014)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4237)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	... 4 more
+Caused by: java.lang.ClassNotFoundException: org.jkiss.dbeaver.tools.transfer.IDataTransferConsumer cannot be found by org.jkiss.dbeaver.ui.editors.sql_1.0.142.202411031831
+	... 9 more
+2024-11-23 21:29:23.147 - org/jkiss/dbeaver/tools/transfer/IDataTransferConsumer
+org.jkiss.dbeaver.DBDatabaseException: org/jkiss/dbeaver/tools/transfer/IDataTransferConsumer
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:253)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.NoClassDefFoundError: org/jkiss/dbeaver/tools/transfer/IDataTransferConsumer
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.showExecutionResult(SQLQueryJob.java:773)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1014)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4237)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	... 4 more
+Caused by: java.lang.ClassNotFoundException: org.jkiss.dbeaver.tools.transfer.IDataTransferConsumer cannot be found by org.jkiss.dbeaver.ui.editors.sql_1.0.142.202411031831
+	... 9 more
+2024-11-23 21:29:36.313 - org/jkiss/dbeaver/tools/transfer/IDataTransferConsumer
+org.jkiss.dbeaver.DBDatabaseException: org/jkiss/dbeaver/tools/transfer/IDataTransferConsumer
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:253)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.NoClassDefFoundError: org/jkiss/dbeaver/tools/transfer/IDataTransferConsumer
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.showExecutionResult(SQLQueryJob.java:773)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1014)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4237)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	... 4 more
+Caused by: java.lang.ClassNotFoundException: org.jkiss.dbeaver.tools.transfer.IDataTransferConsumer cannot be found by org.jkiss.dbeaver.ui.editors.sql_1.0.142.202411031831
+	... 9 more
+2024-11-23 21:33:54.993 - org/jkiss/dbeaver/tools/transfer/IDataTransferConsumer
+org.jkiss.dbeaver.DBDatabaseException: org/jkiss/dbeaver/tools/transfer/IDataTransferConsumer
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:253)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.NoClassDefFoundError: org/jkiss/dbeaver/tools/transfer/IDataTransferConsumer
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.showExecutionResult(SQLQueryJob.java:773)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1014)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4237)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	... 4 more
+Caused by: java.lang.ClassNotFoundException: org.jkiss.dbeaver.tools.transfer.IDataTransferConsumer cannot be found by org.jkiss.dbeaver.ui.editors.sql_1.0.142.202411031831
+	... 9 more
+2024-11-23 21:34:42.790 - org/jkiss/dbeaver/tools/transfer/IDataTransferConsumer
+org.jkiss.dbeaver.DBDatabaseException: org/jkiss/dbeaver/tools/transfer/IDataTransferConsumer
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:253)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.NoClassDefFoundError: org/jkiss/dbeaver/tools/transfer/IDataTransferConsumer
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.showExecutionResult(SQLQueryJob.java:773)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1014)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4237)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	... 4 more
+Caused by: java.lang.ClassNotFoundException: org.jkiss.dbeaver.tools.transfer.IDataTransferConsumer cannot be found by org.jkiss.dbeaver.ui.editors.sql_1.0.142.202411031831
+	... 9 more
+2024-11-23 21:38:54.073 - org/jkiss/dbeaver/tools/transfer/IDataTransferConsumer
+org.jkiss.dbeaver.DBDatabaseException: org/jkiss/dbeaver/tools/transfer/IDataTransferConsumer
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:253)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.NoClassDefFoundError: org/jkiss/dbeaver/tools/transfer/IDataTransferConsumer
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.showExecutionResult(SQLQueryJob.java:773)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1014)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4237)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	... 4 more
+Caused by: java.lang.ClassNotFoundException: org.jkiss.dbeaver.tools.transfer.IDataTransferConsumer cannot be found by org.jkiss.dbeaver.ui.editors.sql_1.0.142.202411031831
+	... 9 more
