@@ -3886,3 +3886,645 @@ org.postgresql.util.PSQLException: ERROR: syntax error at or near "'Todos os dad
 	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
 	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-11-24 21:35:30.859
+!MESSAGE SQL Error [42601]: ERROR: syntax error at or near "="
+  Position: 47
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-11-24 21:35:30.860
+!MESSAGE ERROR: syntax error at or near "="
+  Position: 47
+!STACK 0
+org.postgresql.util.PSQLException: ERROR: syntax error at or near "="
+  Position: 47
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:297)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:335)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:128)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:631)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:522)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:541)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1001)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4237)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-11-24 21:35:54.474
+!MESSAGE SQL Error [42601]: ERROR: syntax error at or near "LIKE"
+  Position: 50
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-11-24 21:35:54.474
+!MESSAGE ERROR: syntax error at or near "LIKE"
+  Position: 50
+!STACK 0
+org.postgresql.util.PSQLException: ERROR: syntax error at or near "LIKE"
+  Position: 50
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:297)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:335)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:128)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:631)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:522)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:541)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1001)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4237)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-11-24 21:36:06.969
+!MESSAGE SQL Error [42703]: ERROR: column "id" does not exist
+  Position: 44
+
+Error position: line: 158 pos: 43
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-11-24 21:36:06.969
+!MESSAGE SQL Error [42703]: ERROR: column "id" does not exist
+  Position: 44
+!SUBENTRY 2 org.jkiss.dbeaver.model 4 0 2024-11-24 21:36:06.969
+!MESSAGE ERROR: column "id" does not exist
+  Position: 44
+!STACK 0
+org.postgresql.util.PSQLException: ERROR: column "id" does not exist
+  Position: 44
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:297)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:335)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:128)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:631)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:522)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:544)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1001)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4237)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-11-24 21:36:17.825
+!MESSAGE SQL Error [42883]: ERROR: operator does not exist: integer ~~ integer
+  Hint: No operator matches the given name and argument types. You might need to add explicit type casts.
+  Position: 54
+
+Error position: line: 158 pos: 53
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-11-24 21:36:17.825
+!MESSAGE SQL Error [42883]: ERROR: operator does not exist: integer ~~ integer
+  Hint: No operator matches the given name and argument types. You might need to add explicit type casts.
+  Position: 54
+!SUBENTRY 2 org.jkiss.dbeaver.model 4 0 2024-11-24 21:36:17.825
+!MESSAGE ERROR: operator does not exist: integer ~~ integer
+  Hint: No operator matches the given name and argument types. You might need to add explicit type casts.
+  Position: 54
+!STACK 0
+org.postgresql.util.PSQLException: ERROR: operator does not exist: integer ~~ integer
+  Hint: No operator matches the given name and argument types. You might need to add explicit type casts.
+  Position: 54
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:297)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:335)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:128)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:631)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:522)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:544)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1001)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4237)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-11-24 21:36:27.772
+!MESSAGE SQL Error [42883]: ERROR: operator does not exist: integer ~~ unknown
+  Hint: No operator matches the given name and argument types. You might need to add explicit type casts.
+  Position: 54
+
+Error position: line: 158 pos: 53
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-11-24 21:36:27.772
+!MESSAGE SQL Error [42883]: ERROR: operator does not exist: integer ~~ unknown
+  Hint: No operator matches the given name and argument types. You might need to add explicit type casts.
+  Position: 54
+!SUBENTRY 2 org.jkiss.dbeaver.model 4 0 2024-11-24 21:36:27.772
+!MESSAGE ERROR: operator does not exist: integer ~~ unknown
+  Hint: No operator matches the given name and argument types. You might need to add explicit type casts.
+  Position: 54
+!STACK 0
+org.postgresql.util.PSQLException: ERROR: operator does not exist: integer ~~ unknown
+  Hint: No operator matches the given name and argument types. You might need to add explicit type casts.
+  Position: 54
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:297)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:335)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:128)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:631)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:522)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:544)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1001)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4237)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-11-24 21:36:49.786
+!MESSAGE SQL Error [42601]: ERROR: syntax error at or near "'1'"
+  Position: 57
+
+Error position: line: 158 pos: 56
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-11-24 21:36:49.786
+!MESSAGE SQL Error [42601]: ERROR: syntax error at or near "'1'"
+  Position: 57
+!SUBENTRY 2 org.jkiss.dbeaver.model 4 0 2024-11-24 21:36:49.786
+!MESSAGE ERROR: syntax error at or near "'1'"
+  Position: 57
+!STACK 0
+org.postgresql.util.PSQLException: ERROR: syntax error at or near "'1'"
+  Position: 57
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:297)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:335)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:128)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:631)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:522)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:541)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1001)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4237)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-11-24 21:37:15.371
+!MESSAGE SQL Error [42601]: ERROR: syntax error at or near "1"
+  Position: 57
+
+Error position: line: 158 pos: 56
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-11-24 21:37:15.371
+!MESSAGE SQL Error [42601]: ERROR: syntax error at or near "1"
+  Position: 57
+!SUBENTRY 2 org.jkiss.dbeaver.model 4 0 2024-11-24 21:37:15.371
+!MESSAGE ERROR: syntax error at or near "1"
+  Position: 57
+!STACK 0
+org.postgresql.util.PSQLException: ERROR: syntax error at or near "1"
+  Position: 57
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:297)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:335)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:128)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:631)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:522)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:541)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1001)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4237)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-11-24 21:37:23.622
+!MESSAGE org/jkiss/dbeaver/tools/transfer/IDataTransferConsumer
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-11-24 21:37:23.622
+!MESSAGE org.jkiss.dbeaver.tools.transfer.IDataTransferConsumer cannot be found by org.jkiss.dbeaver.ui.editors.sql_1.0.142.202411031831
+!STACK 0
+java.lang.ClassNotFoundException: org.jkiss.dbeaver.tools.transfer.IDataTransferConsumer cannot be found by org.jkiss.dbeaver.ui.editors.sql_1.0.142.202411031831
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.showExecutionResult(SQLQueryJob.java:773)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1014)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4237)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-11-24 21:39:32.290
+!MESSAGE org/jkiss/dbeaver/tools/transfer/IDataTransferConsumer
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-11-24 21:39:32.290
+!MESSAGE org.jkiss.dbeaver.tools.transfer.IDataTransferConsumer cannot be found by org.jkiss.dbeaver.ui.editors.sql_1.0.142.202411031831
+!STACK 0
+java.lang.ClassNotFoundException: org.jkiss.dbeaver.tools.transfer.IDataTransferConsumer cannot be found by org.jkiss.dbeaver.ui.editors.sql_1.0.142.202411031831
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.showExecutionResult(SQLQueryJob.java:773)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1014)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4237)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-11-24 21:40:55.016
+!MESSAGE org/jkiss/dbeaver/tools/transfer/IDataTransferConsumer
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-11-24 21:40:55.016
+!MESSAGE org.jkiss.dbeaver.tools.transfer.IDataTransferConsumer cannot be found by org.jkiss.dbeaver.ui.editors.sql_1.0.142.202411031831
+!STACK 0
+java.lang.ClassNotFoundException: org.jkiss.dbeaver.tools.transfer.IDataTransferConsumer cannot be found by org.jkiss.dbeaver.ui.editors.sql_1.0.142.202411031831
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.showExecutionResult(SQLQueryJob.java:773)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1014)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4237)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-11-24 21:42:06.107
+!MESSAGE org/jkiss/dbeaver/tools/transfer/IDataTransferConsumer
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-11-24 21:42:06.107
+!MESSAGE org.jkiss.dbeaver.tools.transfer.IDataTransferConsumer cannot be found by org.jkiss.dbeaver.ui.editors.sql_1.0.142.202411031831
+!STACK 0
+java.lang.ClassNotFoundException: org.jkiss.dbeaver.tools.transfer.IDataTransferConsumer cannot be found by org.jkiss.dbeaver.ui.editors.sql_1.0.142.202411031831
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.showExecutionResult(SQLQueryJob.java:773)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1014)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4237)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-11-24 21:42:40.591
+!MESSAGE org/jkiss/dbeaver/tools/transfer/IDataTransferConsumer
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-11-24 21:42:40.591
+!MESSAGE org.jkiss.dbeaver.tools.transfer.IDataTransferConsumer cannot be found by org.jkiss.dbeaver.ui.editors.sql_1.0.142.202411031831
+!STACK 0
+java.lang.ClassNotFoundException: org.jkiss.dbeaver.tools.transfer.IDataTransferConsumer cannot be found by org.jkiss.dbeaver.ui.editors.sql_1.0.142.202411031831
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.showExecutionResult(SQLQueryJob.java:773)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1014)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4237)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-11-24 21:46:41.670
+!MESSAGE SQL Error [42601]: Unterminated string literal started at position 179 in SQL 
+INSERT INTO cliente (idcliente, nome, cpf, rg, data_nascimento, genero, profissao, municipio, uf)
+VALUES (16, 'Maicon', '1234', '1956-10-10', 'F', 'Empresário', 'Florianópolis', 'PR). Expected  char
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-11-24 21:46:41.670
+!MESSAGE Unterminated string literal started at position 179 in SQL 
+INSERT INTO cliente (idcliente, nome, cpf, rg, data_nascimento, genero, profissao, municipio, uf)
+VALUES (16, 'Maicon', '1234', '1956-10-10', 'F', 'Empresário', 'Florianópolis', 'PR). Expected  char
+!STACK 0
+org.postgresql.util.PSQLException: Unterminated string literal started at position 179 in SQL 
+INSERT INTO cliente (idcliente, nome, cpf, rg, data_nascimento, genero, profissao, municipio, uf)
+VALUES (16, 'Maicon', '1234', '1956-10-10', 'F', 'Empresário', 'Florianópolis', 'PR). Expected  char
+	at org.postgresql.core.Parser.checkParsePosition(Parser.java:1435)
+	at org.postgresql.core.Parser.parseSql(Parser.java:1342)
+	at org.postgresql.core.Parser.replaceProcessing(Parser.java:1286)
+	at org.postgresql.core.CachedQueryCreateAction.create(CachedQueryCreateAction.java:43)
+	at org.postgresql.core.QueryExecutorBase.createQueryByKey(QueryExecutorBase.java:369)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:318)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:297)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:335)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:128)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:631)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:522)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:541)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1001)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4237)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-11-24 21:47:02.865
+!MESSAGE SQL Error [42601]: ERROR: INSERT has more target columns than expressions
+  Position: 96
+
+Error position: line: 170 pos: 95
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-11-24 21:47:02.865
+!MESSAGE SQL Error [42601]: ERROR: INSERT has more target columns than expressions
+  Position: 96
+!SUBENTRY 2 org.jkiss.dbeaver.model 4 0 2024-11-24 21:47:02.865
+!MESSAGE ERROR: INSERT has more target columns than expressions
+  Position: 96
+!STACK 0
+org.postgresql.util.PSQLException: ERROR: INSERT has more target columns than expressions
+  Position: 96
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:297)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:335)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:128)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:631)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:522)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:544)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1001)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4237)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-11-24 21:47:39.316
+!MESSAGE org/jkiss/dbeaver/tools/transfer/IDataTransferConsumer
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-11-24 21:47:39.316
+!MESSAGE org.jkiss.dbeaver.tools.transfer.IDataTransferConsumer cannot be found by org.jkiss.dbeaver.ui.editors.sql_1.0.142.202411031831
+!STACK 0
+java.lang.ClassNotFoundException: org.jkiss.dbeaver.tools.transfer.IDataTransferConsumer cannot be found by org.jkiss.dbeaver.ui.editors.sql_1.0.142.202411031831
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.showExecutionResult(SQLQueryJob.java:773)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1014)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4237)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-11-24 21:48:41.749
+!MESSAGE org/jkiss/dbeaver/tools/transfer/IDataTransferConsumer
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-11-24 21:48:41.749
+!MESSAGE org.jkiss.dbeaver.tools.transfer.IDataTransferConsumer cannot be found by org.jkiss.dbeaver.ui.editors.sql_1.0.142.202411031831
+!STACK 0
+java.lang.ClassNotFoundException: org.jkiss.dbeaver.tools.transfer.IDataTransferConsumer cannot be found by org.jkiss.dbeaver.ui.editors.sql_1.0.142.202411031831
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.showExecutionResult(SQLQueryJob.java:773)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1014)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4237)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-11-24 21:49:20.390
+!MESSAGE org/jkiss/dbeaver/tools/transfer/IDataTransferConsumer
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-11-24 21:49:20.390
+!MESSAGE org.jkiss.dbeaver.tools.transfer.IDataTransferConsumer cannot be found by org.jkiss.dbeaver.ui.editors.sql_1.0.142.202411031831
+!STACK 0
+java.lang.ClassNotFoundException: org.jkiss.dbeaver.tools.transfer.IDataTransferConsumer cannot be found by org.jkiss.dbeaver.ui.editors.sql_1.0.142.202411031831
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.showExecutionResult(SQLQueryJob.java:773)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1014)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4237)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-11-24 21:49:52.674
+!MESSAGE org/jkiss/dbeaver/tools/transfer/IDataTransferConsumer
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-11-24 21:49:52.675
+!MESSAGE org.jkiss.dbeaver.tools.transfer.IDataTransferConsumer cannot be found by org.jkiss.dbeaver.ui.editors.sql_1.0.142.202411031831
+!STACK 0
+java.lang.ClassNotFoundException: org.jkiss.dbeaver.tools.transfer.IDataTransferConsumer cannot be found by org.jkiss.dbeaver.ui.editors.sql_1.0.142.202411031831
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.showExecutionResult(SQLQueryJob.java:773)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1014)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4237)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-11-24 21:50:28.522
+!MESSAGE org/jkiss/dbeaver/tools/transfer/IDataTransferConsumer
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-11-24 21:50:28.522
+!MESSAGE org.jkiss.dbeaver.tools.transfer.IDataTransferConsumer cannot be found by org.jkiss.dbeaver.ui.editors.sql_1.0.142.202411031831
+!STACK 0
+java.lang.ClassNotFoundException: org.jkiss.dbeaver.tools.transfer.IDataTransferConsumer cannot be found by org.jkiss.dbeaver.ui.editors.sql_1.0.142.202411031831
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.showExecutionResult(SQLQueryJob.java:773)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1014)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4237)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-11-24 21:54:32.296
+!MESSAGE org/jkiss/dbeaver/tools/transfer/IDataTransferConsumer
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-11-24 21:54:32.296
+!MESSAGE org.jkiss.dbeaver.tools.transfer.IDataTransferConsumer cannot be found by org.jkiss.dbeaver.ui.editors.sql_1.0.142.202411031831
+!STACK 0
+java.lang.ClassNotFoundException: org.jkiss.dbeaver.tools.transfer.IDataTransferConsumer cannot be found by org.jkiss.dbeaver.ui.editors.sql_1.0.142.202411031831
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.showExecutionResult(SQLQueryJob.java:773)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1014)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4237)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-11-24 21:56:07.526
+!MESSAGE SQL Error [42601]: ERROR: INSERT has more target columns than expressions
+  Position: 82
+
+Error position: line: 176 pos: 81
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-11-24 21:56:07.526
+!MESSAGE SQL Error [42601]: ERROR: INSERT has more target columns than expressions
+  Position: 82
+!SUBENTRY 2 org.jkiss.dbeaver.model 4 0 2024-11-24 21:56:07.526
+!MESSAGE ERROR: INSERT has more target columns than expressions
+  Position: 82
+!STACK 0
+org.postgresql.util.PSQLException: ERROR: INSERT has more target columns than expressions
+  Position: 82
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:297)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.execute(JDBCStatementImpl.java:335)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCStatementImpl.executeStatement(JDBCStatementImpl.java:128)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeStatement(SQLQueryJob.java:631)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.lambda$2(SQLQueryJob.java:522)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.executeSingleQuery(SQLQueryJob.java:544)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1001)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4237)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-11-24 21:57:06.007
+!MESSAGE org/jkiss/dbeaver/tools/transfer/IDataTransferConsumer
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-11-24 21:57:06.007
+!MESSAGE org.jkiss.dbeaver.tools.transfer.IDataTransferConsumer cannot be found by org.jkiss.dbeaver.ui.editors.sql_1.0.142.202411031831
+!STACK 0
+java.lang.ClassNotFoundException: org.jkiss.dbeaver.tools.transfer.IDataTransferConsumer cannot be found by org.jkiss.dbeaver.ui.editors.sql_1.0.142.202411031831
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.showExecutionResult(SQLQueryJob.java:773)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1014)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4237)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-11-24 21:57:59.143
+!MESSAGE org/jkiss/dbeaver/tools/transfer/IDataTransferConsumer
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-11-24 21:57:59.143
+!MESSAGE org.jkiss.dbeaver.tools.transfer.IDataTransferConsumer cannot be found by org.jkiss.dbeaver.ui.editors.sql_1.0.142.202411031831
+!STACK 0
+java.lang.ClassNotFoundException: org.jkiss.dbeaver.tools.transfer.IDataTransferConsumer cannot be found by org.jkiss.dbeaver.ui.editors.sql_1.0.142.202411031831
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.showExecutionResult(SQLQueryJob.java:773)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1014)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4237)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-11-24 21:58:44.190
+!MESSAGE org/jkiss/dbeaver/tools/transfer/IDataTransferConsumer
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-11-24 21:58:44.190
+!MESSAGE org.jkiss.dbeaver.tools.transfer.IDataTransferConsumer cannot be found by org.jkiss.dbeaver.ui.editors.sql_1.0.142.202411031831
+!STACK 0
+java.lang.ClassNotFoundException: org.jkiss.dbeaver.tools.transfer.IDataTransferConsumer cannot be found by org.jkiss.dbeaver.ui.editors.sql_1.0.142.202411031831
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.showExecutionResult(SQLQueryJob.java:773)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1014)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4237)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-11-24 21:58:54.387
+!MESSAGE org/jkiss/dbeaver/tools/transfer/IDataTransferConsumer
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-11-24 21:58:54.387
+!MESSAGE org.jkiss.dbeaver.tools.transfer.IDataTransferConsumer cannot be found by org.jkiss.dbeaver.ui.editors.sql_1.0.142.202411031831
+!STACK 0
+java.lang.ClassNotFoundException: org.jkiss.dbeaver.tools.transfer.IDataTransferConsumer cannot be found by org.jkiss.dbeaver.ui.editors.sql_1.0.142.202411031831
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.showExecutionResult(SQLQueryJob.java:773)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1014)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4237)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-11-24 21:59:12.845
+!MESSAGE org/jkiss/dbeaver/tools/transfer/IDataTransferConsumer
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-11-24 21:59:12.845
+!MESSAGE org.jkiss.dbeaver.tools.transfer.IDataTransferConsumer cannot be found by org.jkiss.dbeaver.ui.editors.sql_1.0.142.202411031831
+!STACK 0
+java.lang.ClassNotFoundException: org.jkiss.dbeaver.tools.transfer.IDataTransferConsumer cannot be found by org.jkiss.dbeaver.ui.editors.sql_1.0.142.202411031831
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.showExecutionResult(SQLQueryJob.java:773)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1014)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4237)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2024-11-24 22:00:00.834
+!MESSAGE org/jkiss/dbeaver/tools/transfer/IDataTransferConsumer
+!SUBENTRY 1 org.jkiss.dbeaver.model 4 0 2024-11-24 22:00:00.834
+!MESSAGE org.jkiss.dbeaver.tools.transfer.IDataTransferConsumer cannot be found by org.jkiss.dbeaver.ui.editors.sql_1.0.142.202411031831
+!STACK 0
+java.lang.ClassNotFoundException: org.jkiss.dbeaver.tools.transfer.IDataTransferConsumer cannot be found by org.jkiss.dbeaver.ui.editors.sql_1.0.142.202411031831
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.showExecutionResult(SQLQueryJob.java:773)
+	at org.jkiss.dbeaver.ui.editors.sql.execute.SQLQueryJob.extractData(SQLQueryJob.java:1014)
+	at org.jkiss.dbeaver.ui.editors.sql.SQLEditor$QueryResultsContainer.readData(SQLEditor.java:4237)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.lambda$0(ResultSetJobDataRead.java:128)
+	at org.jkiss.dbeaver.model.exec.DBExecUtils.tryExecuteRecover(DBExecUtils.java:192)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetJobDataRead.run(ResultSetJobDataRead.java:126)
+	at org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer$ResultSetDataPumpJob.run(ResultSetViewer.java:5166)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)

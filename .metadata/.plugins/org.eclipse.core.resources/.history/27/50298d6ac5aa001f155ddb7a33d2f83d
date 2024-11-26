@@ -155,20 +155,7 @@ SELECT * FROM cliente;
 
 -- How to update a value on the table
 
-UPDATE cliente SET nome = 'Joaquim' WHERE idcliente = 1;
-
-UPDATE cliente SET nome = 'Adriano', genero = 'F', numero = '241' WHERE idcliente = 4;
-
-UPDATE cliente SET nome = 'Adriana' WHERE idcliente = 4;
-
-INSERT INTO cliente (idcliente, nome) VALUES (16, 'João');
-
-DELETE FROM cliente WHERE idcliente = 16;
-
--- exercicio II
-
-INSERT INTO cliente (idcliente, nome, cpf, rg, data_nascimento, genero, profissao, municipio, uf)
-VALUES (16, 'Maicon', '1234', '1956-10-10', 'F', 'Empresário', 'Florianópolis', 'PR');
+UPDATE cliente SET nome = 'Joaquim' WHERE idcliente LIKE '1';
 
 
 
